@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			火车头优化 - OIstream 的博客 | 每一行代码都是改变世界的一份能量！
+		</title>
+		<link rel="stylesheet" type="text/css" href="../../../style/allcss-v4.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/divcss-v4.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/decocss-v4.css">
+		<link rel="icon" type="image/ico" href="../../../img/!icon-bird.ico"/>
+		<!--导入 Font Awesome-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<!---->
+		<!--导入 MathJax 的 LaTeX 渲染-->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async
+				src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
+		<!---->
+		<!--导入不蒜子统计器-->
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <!---->
+        <!-- 导入Gitalk 支持文件-->
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+	<!---->
+	</head>
+	<body>
+		<div id="container" style="font-family:微软雅黑">
+	<div id="menu">
+		<script src="../../../script/showMenu.js"></script>
+	</div>
+	<div class="line">
+			<div id="side">
+			<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;">
+		<h2 class="center"><i class="fa fa-tags"></i> 全部标签</h2>
+		</div>
+		<div id="sideall">
+				<div id="divlist">
+					<div class="item">
+						<a href="#1">
+							<br/>
+							<i class="fa fa-tag"></i> 顶部
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					</div>
+			</div>
+		</div>
+		
+			<div id="main">
+				<div class="blogItem" style="text-align:center;">
+					<span class="h">火车头优化</span><br/><br/>
+					<small><i class="fa fa-tag"></i> 笔记&nbsp;&nbsp;<i class="fa fa-book"></i> C++语言 | 优化与卡常&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 2020-07-15 18:29&nbsp;&nbsp;<i class="fa fa-check-square-o"></i> 2020-07-15 18:29&nbsp;&nbsp;<i class="fa fa-file"></i> C++</small>
+					<span id="busuanzi_container_page_pv" style="font-size:13px;">
+						<i class="fa fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+</span>
+				</div>
+				<div id="longBlog"><p>下面这个东西就是大名鼎鼎的<strong>火车头优化</strong>。</p>
+<pre><code class='language-cpp' lang='cpp'>#pragma GCC optimize(3)
+#pragma GCC target(&quot;avx,sse2,sse3,sse4,mmx&quot;)
+#pragma GCC optimize(&quot;Ofast&quot;)
+#pragma GCC optimize(&quot;inline&quot;)
+#pragma GCC optimize(&quot;-fgcse&quot;)
+#pragma GCC optimize(&quot;-fgcse-lm&quot;)
+#pragma GCC optimize(&quot;-fipa-sra&quot;)
+#pragma GCC optimize(&quot;-ftree-pre&quot;)
+#pragma GCC optimize(&quot;-ftree-vrp&quot;)
+#pragma GCC optimize(&quot;-fpeephole2&quot;)
+#pragma GCC optimize(&quot;-ffast-math&quot;)
+#pragma GCC optimize(&quot;-fsched-spec&quot;)
+#pragma GCC optimize(&quot;unroll-loops&quot;)
+#pragma GCC optimize(&quot;-falign-jumps&quot;)
+#pragma GCC optimize(&quot;-falign-loops&quot;)
+#pragma GCC optimize(&quot;-falign-labels&quot;)
+#pragma GCC optimize(&quot;-fdevirtualize&quot;)
+#pragma GCC optimize(&quot;-fcaller-saves&quot;)
+#pragma GCC optimize(&quot;-fcrossjumping&quot;)
+#pragma GCC optimize(&quot;-fthread-jumps&quot;)
+#pragma GCC optimize(&quot;-funroll-loops&quot;)
+#pragma GCC optimize(&quot;-fwhole-program&quot;)
+#pragma GCC optimize(&quot;-freorder-blocks&quot;)
+#pragma GCC optimize(&quot;-fschedule-insns&quot;)
+#pragma GCC optimize(&quot;inline-functions&quot;)
+#pragma GCC optimize(&quot;-ftree-tail-merge&quot;)
+#pragma GCC optimize(&quot;-fschedule-insns2&quot;)
+#pragma GCC optimize(&quot;-fstrict-aliasing&quot;)
+#pragma GCC optimize(&quot;-fstrict-overflow&quot;)
+#pragma GCC optimize(&quot;-falign-functions&quot;)
+#pragma GCC optimize(&quot;-fcse-skip-blocks&quot;)
+#pragma GCC optimize(&quot;-fcse-follow-jumps&quot;)
+#pragma GCC optimize(&quot;-fsched-interblock&quot;)
+#pragma GCC optimize(&quot;-fpartial-inlining&quot;)
+#pragma GCC optimize(&quot;no-stack-protector&quot;)
+#pragma GCC optimize(&quot;-freorder-functions&quot;)
+#pragma GCC optimize(&quot;-findirect-inlining&quot;)
+#pragma GCC optimize(&quot;-fhoist-adjacent-loads&quot;)
+#pragma GCC optimize(&quot;-frerun-cse-after-loop&quot;)
+#pragma GCC optimize(&quot;inline-small-functions&quot;)
+#pragma GCC optimize(&quot;-finline-small-functions&quot;)
+#pragma GCC optimize(&quot;-ftree-switch-conversion&quot;)
+#pragma GCC optimize(&quot;-foptimize-sibling-calls&quot;)
+#pragma GCC optimize(&quot;-fexpensive-optimizations&quot;)
+#pragma GCC optimize(&quot;-funsafe-loop-optimizations&quot;)
+#pragma GCC optimize(&quot;inline-functions-called-once&quot;)
+#pragma GCC optimize(&quot;-fdelete-null-pointer-checks&quot;)
+</code></pre>
+<p>本质上是从编译器角度加快了执行程序的时间。</p>
+<p>使用的时候就把它放在自己程序的开头就可以。</p>
+<p>然鹅，事实证明这个东西有时候也不管用。。。</p>
+<p>而且呢，这个东西甚至还有可能会带来副作用，反而比 O2 要慢。</p>
+<p>所以，慎用！</p>
+<p><del>不过据说用来卡几十毫秒的常还是挺好用的</del></p>
+</div>
+<div id="lbGitalk">
+    <div id="gitalk-container"></div>    <script type="text/javascript">
+var gitalk = new Gitalk({
+
+// gitalk的主要参数
+    clientID: '2c00a1a3c7fe31cced9d',
+    clientSecret: '41a9cd57f80a33bb41d8a498ddd53e488097b3ab',
+    repo: 'zxp2019.github.io',
+    owner: 'zxp2019',
+    admin: ['zxp2019'],
+    id:window.location.pathname,
+
+});
+gitalk.render('gitalk-container');
+</script>   
+</div>
+</div>
+</div>
+<div id="footer">
+    <br/>
+    <script src="../../../script/showFooter.js"></script>
+</div>
+</div>
+</body>
+</html>
