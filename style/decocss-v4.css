@@ -40,3 +40,18 @@
 	padding-left:28px;
 	text-decoration:line-through black;
 }
+/*v4 的按钮*/
+.newButton
+{
+    border-radius:.15rem;
+    border:none;
+    background-color:rgb(33,133,208);
+    color:white;
+    font-size:15px;
+    padding:10px;
+    margin:7.5px;
+}
+.newButton:active
+{
+    background-color:rgb(11,111,187);
+}
