@@ -359,3 +359,8 @@
 	background-color:rgb(250, 250, 250,.70);
 	border-left:5px solid #86CAFB;
 }
+#longBlog code
+{
+	padding-left:2px;
+	padding-right:2px;
+}
