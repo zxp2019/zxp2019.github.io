@@ -199,7 +199,7 @@
 /*主页通知栏*/
 #notice
 {
-	background-color:rgba(33,133,208,.85);
+	background-color:rgba(33,133,208,.70);
 	color:white;
 	border-radius:.5rem;
 	padding-top:20px;
@@ -223,7 +223,7 @@
 	padding-bottom:30px;
 	padding-left:15px;
 	padding-right:15px;
-	background-color:white;
+	background-color:rgba(255,255,255,.70);
 	color:rgba(0,0,0,.70);
 	border-radius:.5rem;
 	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
