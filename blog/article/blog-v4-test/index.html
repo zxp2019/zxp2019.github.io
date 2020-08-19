@@ -22,101 +22,84 @@
 		<!---->
 	</head>
 	<body>
-			<div id="container" style="font-family:微软雅黑">
-		<div id="menu">
-			<script src="../../../script/showMenu.js"></script>
+		<div id="container" style="font-family:微软雅黑">
+	<div id="menu">
+		<script src="../../../script/showMenu.js"></script>
+	</div>
+	<div class="line">
+			<div id="side">
+			<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;">
+		<h2 class="center"><i class="fa fa-tags"></i> 全部标签</h2>
 		</div>
-		<div class="line">
-				<div id="side">
-						<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;">
-							<h2 class="center"><i class="fa fa-tags"></i> 全部标签</h2>
-						</div>
-						<div id="sideall">
-								<div id="divlist">
-									<div class="item">
-										<a href="#1">
-											<br/>
-											<i class="fa fa-tag"></i> 文本
-											<br/>
-											<br/>
-										</a>
-
-									</div>
-									<div class="item">
-										<a href="#2">
-											<br/>
-											<i class="fa fa-tag"></i> 代码
-											<br/>
-											<br/>
-										</a>
-									</div>
-									<div class="item">
-										<a href="#3">
-											<br/>
-											<i class="fa fa-tag"></i> LaTeX
-											<br/>
-											<br/>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-				<div id="main">
-					<div class="blogItem" style="text-align:center;">
-						<span class="h">新版博客测试</span><br/><br/>
-						<small><i class="fa fa-tag"></i> 测试&nbsp;&nbsp;<i class="fa fa-book"></i> 其它&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 2020-05-16 14:32&nbsp;&nbsp;<i class="fa fa-check-square-o"></i> 2020-05-16 14:32&nbsp;&nbsp;<i class="fa fa-file"></i> C++</small>
-						<span id="busuanzi_container_page_pv" style="font-size:13px;">
-							<i class="fa fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
-						</span>
+		<div id="sideall">
+				<div id="divlist">
+					<div class="item">
+						<a href="#1">
+							<br/>
+							<i class="fa fa-tag"></i> 文本
+							<br/>
+							<br/>
+						</a>
+						
 					</div>
-					<div id="longBlog">
-						<a name="1"><h2>文本</h2></a>
-						<p><b>我很粗</b></p>
-						<p><i>我很斜</i></p>
-						<p><a href="">点我！</a></p>
-						<img src="../../../img/!icon-bird.ico"/>
-						<br/>
-							<p class="S">我被划去了</p>
-						<p><code>int</code></p>
-						<a name="2"><h2>代码</h2></a>
-						<pre><code>
-							#include&lt;iostream&gt;
-							using namespace std;
-							int main()
-							{
-								return 0;
-							}</code></pre>
-						<a name="3"><h2>LaTeX</h2></a>
-						<p>\(a\)</p>
-						<p>\(\dfrac{-b+\sqrt{\Delta}}{2a}\)</p>
-						\[\sum_{i=0}^{\color{red}\text{你好}}\color{#00EE00}\textbf{我很♂粗}\]
+					<div class="item">
+						<a href="#2">
+							<br/>
+							<i class="fa fa-tag"></i> 代码
+							<br/>
+							<br/>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#3">
+							<br/>
+							<i class="fa fa-tag"></i> LaTeX
+							<br/>
+							<br/>
+						</a>
 					</div>
 				</div>
 			</div>
-			<div id="lbGitalk">
-				<!-- 导入Gitalk 支持文件-->
-				<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-				<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
-				<div id="gitalk-container"></div>   
-				<script type="text/javascript">
-					var gitalk = new Gitalk({
-						// gitalk的主要参数
-						clientID: '2c00a1a3c7fe31cced9d',
-						clientSecret: '41a9cd57f80a33bb41d8a498ddd53e488097b3ab',
-						repo: 'zxp2019.github.io',
-						owner: 'zxp2019',
-						admin: ['zxp2019'],
-						id:window.location.pathname,
-					});
-					gitalk.render('gitalk-container');
-				</script>   
-			</div>
-
-			<div id="footer">
-				<br/>
-				<script src="../../../script/showFooter.js"></script>
-			</div>
 		</div>
+		
+			<div id="main">
+				<div class="blogItem" style="text-align:center;">
+					<span class="h">新版博客测试</span><br/><br/>
+					<small><i class="fa fa-tag"></i> 测试&nbsp;&nbsp;<i class="fa fa-book"></i> 其它&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 2020-05-16 14:32&nbsp;&nbsp;<i class="fa fa-check-square-o"></i> 2020-05-16 14:32&nbsp;&nbsp;<i class="fa fa-file"></i> C++</small>
+					<span id="busuanzi_container_page_pv" style="font-size:13px;">
+						<i class="fa fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+</span>
+				</div>
+				<div id="longBlog">
+					<a name="1"><h2>文本</h2></a>
+					<p><b>我很粗</b></p>
+					<p><i>我很斜</i></p>
+					<p><a href="">点我！</a></p>
+					<img src="../../../img/!icon-bird.ico"/>
+					<br/>
+					<p><code>int</code></p>
+					<p><del>谔谔</del></p>
+					<blockquote>但你出言不逊是！！——语文王子</blockquote>
+					<a name="2"><h2>代码</h2></a>
+					<pre><code>#include&lt;iostream&gt;
+using namespace std;
+int main()
+{
+	return 0;
+}</code></pre>
+					<a name="3"><h2>LaTeX</h2></a>
+					<p>\(a\)</p>
+					<p>\(\dfrac{-b+\sqrt{\Delta}}{2a}\)</p>
+					\[\sum_{i=0}^{\color{red}\text{你好}}\color{#00EE00}\textbf{我很粗}\]
+					
+		</div>
+		</div>
+		</div>
+		
+		<div id="footer">
+			<br/>
+			<script src="../../../script/showFooter.js"></script>
+		</div>
+	</div>
 	</body>
 </html>
