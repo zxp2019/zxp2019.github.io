@@ -253,7 +253,7 @@
 }
 #lbGitalk
 {
-	background-color:rgba(255,255,255);
+	background-color:rgba(255,255,255,.70);
 	padding-top:40px;
 	padding-bottom:40px;
 	padding-left:40px;
@@ -275,7 +275,7 @@
 }
 #longBlog
 {
-	background-color:rgba(255,255,255);
+	background-color:rgba(255,255,255,.70);
 	padding-top:40px;
 	padding-bottom:40px;
 	padding-left:40px;
