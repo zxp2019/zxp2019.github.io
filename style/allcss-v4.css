@@ -12,7 +12,10 @@ body
 	padding-right:0em;
 	padding-bottom:0em;
 	padding-top:0em;
-	background-color:rgb(232,232,232)/*#000000*/;
+	background-image:url(https://bing.ioliu.cn/v1/rand);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
 }
 div
 {
