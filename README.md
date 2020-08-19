@@ -17,11 +17,13 @@ Markdown 格式来书写长文本。
 
 [Gitalk](https://gitalk.github.io/) 评论插件。
 
+[必应壁纸](https://bing.ioliu.cn/) 提供的随机高清 [必应](https://bing.com/) 壁纸生成器。
+
 # Update Log
 
 \[English\] \[[Chinese(Text File)](https://zxp2019.github.io/new.txt)\]（v4.6.3以后不再更新） \[Chinese(Markdown File)\]
 
-[直通车，开往最新版本](https://github.com/zxp2019/zxp2019.github.io/blob/master/README.md#v492-2020718-by-oistream)
+[直通车，开往最新版本](https://github.com/zxp2019/zxp2019.github.io/blob/master/README.md#v4100-2020819-by-oistream)
 
 ## v3
 ### v3.0.1 (2020.3.24)
@@ -352,3 +354,10 @@ Fix: 图像显示 bug。
 ### v4.9.2 (2020.7.18) by oistream
 
 Add: 对 IE 浏览器用户的友情提醒。
+
+### v4.10.0 (2020.8.19) by oistream
+
+Add: 随机必应壁纸背景图。
+
+Change: 优化了部分样式。
+
