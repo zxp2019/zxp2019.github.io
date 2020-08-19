@@ -1,84 +1,366 @@
-/*此样式表适用于全站。且为低级设置。*/
-/*底层背景*/
-body
+/*一些div定义*/
+/*头*/
+#header
 {
-	margin-left:0px;
-	margin-right:0px;
-	margin-top:0px;
-	margin-bottom:0px;
-	border-style:none;
-	outline-style:none;
-	padding-left:0em;
-	padding-right:0em;
-	padding-bottom:0em;
-	padding-top:0em;
-	background-image:url(https://bing.ioliu.cn/v1/rand);
+	/*4.x 不再需要*/
+	display:none;
+	padding-bottom:1em;
+	padding-top:1em;
+	background-image:url('../img/!header-bird.png');
+	/*422地球日：background-image:url('../img/!earth.jpeg');*/
 	background-repeat:no-repeat;
 	background-size:cover;
-	background-attachment: fixed;
+	text-align:center;
+	color:blue;
+	/*422地球日：color:white;*/
 }
-div
+/*logo*/
+.logo
 {
-	margin-left:0px;
-	margin-right:0px;
-	margin-top:0px;
-	margin-bottom:0px;
-	border-style:none;
-	outline-style:none;
-	padding-left:0em;
-	padding-right:0em;
-	padding-bottom:0em;
-	padding-top:0em;
+	font-family:"Microsoft Yahei";
 }
-/*普通段落*/
-p
+/*并排*/
+.line
 {
-	line-height:120%;
-	text-decoration:none;
-	text-indent:25px;
+	display:flex;
+	justify-content:center;
+
 }
-/*粗体*/
-strong
+/*logo下面的副标题*/
+/*中文*/
+.sentence-chn
 {
-	line-height:120%;
-	text-indent:25px;
+	font-family:楷体,微软雅黑,黑体;
+	font-size:17px;
 }
-/*链接*/
-a
+/*英文*/
+.sentence-eng
 {
-	text-decoration:none;
+	font-family:Consolas,"Courier New",Courier;
+	font-size:17px;
 }
-a:link
+/*目录*/
+#menu
 {
-	color:#3399FF;
+	position: sticky;
+	top: 0;
+	padding-top:8px;
+	padding-bottom:40px;
+	/****4.0.0 2020-05-06更新*/
+	background-color:rgba(255,255,255,.90);
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	/****结束*/
+	font-size:20px;
+	/****3.1.11 2020-04-21更新*/
+	padding-left:15px;
+	padding-right:15px;
+	/****结束*/
+	/*height:5%;
+	width:95%;*/
+	/****4.4.2 2020-05-18更新*/
+	z-index:999;
+	/****结束*/
 }
-a:visited
+/*导航栏字体*/
+#menu a:link
 {
-	color:#3399FF;
+	color:rgba(0,0,0,.80);
 }
-a:hover
+#menu a:visited
 {
-	color:#FFFFFF;
+	color:rgba(0,0,0,.80);
 }
-a:active
+#menu a:hover
 {
-	color:#FFFFFF;
+	color:rgba(33,133,208,.85);
 }
-h1
+#menu a:active
+{
+	color:rgba(33,133,208,.85);
+}
+/*首页图集*/
+#picnews
+{
+	padding-left:5px;
+	padding-right:5px;
+}
+/*主div*/
+#main
+{
+	width:75%;
+	margin:none;
+}
+/*右侧边栏*/
+#side
+{
+	width:25%;
+	margin:10px;
+}
+/*OI 周报*/
+#OInews
+{
+	text-align:center;padding:10px;background-color:rgba(0,0,0,.85);margin:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+}
+/*主页侧边栏*/
+.rightdiv
+{
+	background-color:rgba(0,0,0,.85);
+	text-align:center;margin:10px;padding:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	color:white;
+}
+/*最新博文 & 最新动态 & 博文*/
+#blog
+{
+	background-color:rgba(0,0,0,.85);
+	padding:10px;margin:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	color:white;
+}
+#blog h2
 {
 	text-align:center;
 }
-code
+#blog h1
 {
-	font-family:Consolas,Courier;
+	text-align:center;
 }
-pre
+#blog h3
 {
-	background-color:rgba(0,0,0,.70);
-	font-family:Consolas,Courier;
+	text-align:center;
+}
+/*脚部*/
+#footer
+{
+	text-align:center;background-color:rgb(32,32,32);height:60px;
+}
+/*左侧边栏列表*/
+#divlist
+{
+	border-radius:.5rem;
+	background-color:rgba(0,0,0,.85);
+	color:white;
+	box-shadow:1px 1px 5px rgba(136,136,136,.70);
+}
+/*左侧边栏需要 fixed 的部分*/
+#sideall
+{
+    position:sticky;
+	top:58px;
+	width:100%;
+}
+/*列表中的每一项*/
+.item
+{
+	border-bottom:1px solid rgb(136,136,136);
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	color:white;
+	font-size:18px;
+}
+.item a
+{
 	color:white;
 }
-i
+/*中间的每一项*/
+.mainitem
 {
-	margin-right:6px;
+	margin:5px;
+	background-color:black;
+	color:white;
+	width:25%;
+	border:3px solid #006633;
+	text-align:center;
+}
+/*没有radius的blog*/
+#blogWithNoRadius
+{
+	background-color:rgba(0,0,0,.85);
+	padding:10px;margin:10px;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+}
+/*OInews中的picture*/
+.oiNewsPic
+{
+	width:100%;
+}
+/*左浮动*/
+.floatLeft
+{
+	float:left;
+}
+/*右浮动*/
+.floatRight
+{
+	float:right;
+}
+/*主页通知栏*/
+#notice
+{
+	background-color:rgba(33,133,208,.70);
+	color:white;
+	border-radius:.5rem;
+	padding-top:20px;
+	padding-bottom:10px;
+	padding-left:30px;
+	padding-right:30px;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	margin:10px;
+}
+#notice p
+{
+	text-indent:0em;
+	text-indent:0em;
+	line-height:1.5em;
+	letter-spacing:.1em;
+}
+.blogItem
+{
+	margin:10px;
+	padding-top:30px;
+	padding-bottom:30px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color:rgba(255,255,255,.70);
+	color:rgba(0,0,0,.70);
+	border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+}
+.blogItem .h
+{
+	font-family:'Microsoft Yahei';
+	color:rgba(0,0,0,.70);
+	font-size:30px;
+}
+.blogItem span
+{
+	color:rgba(0,0,0,.70);
+}
+.blogItem .bigSmall
+{
+	font-size:17px;
+}
+.OInewsPicNew
+{
+	margin:10px;
+}
+.OInewsPicNew img
+{
+	border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+}
+#lbGitalk
+{
+	background-color:rgba(255,255,255,.70);
+	padding-top:40px;
+	padding-bottom:40px;
+	padding-left:40px;
+	padding-right:40px;
+	margin:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	color:black;
+}
+#lbGitalk p
+{
+	color:black;
+	text-indent:0em;
+	line-height:1.75em;
+	letter-spacing:.1em;
+}
+#longBlog pre
+{
+	background-color:rgba(10,10,10,.70);
+	border-radius:.15rem;
+	padding:10px;
+	-moz-tab-size:4;
+	tab-size:4;
+}
+#longBlog
+{
+	background-color:rgba(255,255,255,.70);
+	padding-top:40px;
+	padding-bottom:40px;
+	padding-left:40px;
+	padding-right:40px;
+	margin:10px;border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	color:black;
+}
+#longBlog h1,#longBlog h2,#longBlog h3,#longBlog h4,#longBlog h5,#longBlog h6,#longBlog span,#longBlog b,#longBlog i,#longBlog em,#longBlog strong
+{
+	color:black;
+}
+#longBlog p
+{
+	color:black;
+	text-indent:0em;
+	line-height:1.75em;
+	letter-spacing:.1em;
+}
+#longBlog pre
+{
+	background-color:rgba(10,10,10,.70);
+	border-radius:.15rem;
+	padding:10px;
+	-moz-tab-size:4;
+	tab-size:4;
+}
+#longBlog h2
+{
+	text-align:center;
+	text-decoration: underline;
+}
+#longBlog h1
+{
+	text-align:center;
+	text-decoration: underline;
+}
+#longBlog h3
+{
+	text-align:center;
+	text-decoration: underline;
+}
+#longBlog h4
+{
+	text-align:center;
+	text-decoration: underline;
+}
+#longBlog img
+{
+	width:60%;
+}
+#longBlog a:link
+{
+	color:#3399FF;
+}
+#longBlog a:visited
+{
+	color:#3399FF;
+}
+#longBlog a:hover
+{
+	color:#1177DD;
+}
+#longBlog a:active
+{
+	color:#1177DD;
+}
+#longBlog blockquote
+{
+	color:black;
+	font-family: 'Microsoft Yahei Light';
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin:10px;
+	background-color:rgb(250, 250, 250,.70);
+	border-left:5px solid #86CAFB;
+}
+#longBlog code
+{
+	padding-left:2px;
+	padding-right:2px;
 }
