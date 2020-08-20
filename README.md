@@ -23,7 +23,7 @@ Markdown 格式来书写长文本。
 
 \[English\] \[[Chinese(Text File)](https://zxp2019.github.io/new.txt)\]（v4.6.3以后不再更新） \[Chinese(Markdown File)\]
 
-[直通车，开往最新版本](https://github.com/zxp2019/zxp2019.github.io/blob/master/README.md#v4100-2020819-by-oistream)
+[直通车，开往最新版本](https://github.com/zxp2019/zxp2019.github.io/blob/master/README.md#v4110-2020820-by-oistream)
 
 ## v3
 ### v3.0.1 (2020.3.24)
@@ -365,3 +365,7 @@ Add:
 
 Change: 优化了部分样式。
 
+### v4.11.0 (2020.8.20) by oistream
+
+Add:
+1. 增加搜索博文功能（昨天那个其实是假的 qwq）
