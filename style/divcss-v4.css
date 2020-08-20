@@ -133,7 +133,12 @@
 /*脚部*/
 #footer
 {
-	text-align:center;background-color:rgb(32,32,32);height:60px;
+	text-align:center;background-color:rgba(255,255,255,.50);
+	font-size:16px;
+}
+#footer a
+{
+	color:rgba(33,133,208);
 }
 /*左侧边栏列表*/
 #divlist
