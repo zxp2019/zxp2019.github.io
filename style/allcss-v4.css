@@ -89,6 +89,7 @@ input
 	border:2px solid rgb(33,133,208);
 	border-radius:.25rem;
 	padding:10px;
+	margin:7.5px;
 }
 input:hover
 {
