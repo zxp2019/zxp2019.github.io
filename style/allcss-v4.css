@@ -82,3 +82,15 @@ i
 {
 	margin-right:6px;
 }
+input
+{
+	font-size:18px;
+	background-color:rgba(250,250,250,.90);
+	border:2px solid rgb(33,133,208);
+	border-radius:.25rem;
+	padding:10px;
+}
+input:hover
+{
+	border:3.5px solid rgb(33,133,208);
+}
