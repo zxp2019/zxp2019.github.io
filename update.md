@@ -360,3 +360,7 @@ Change:
 Add: 
 1. 工具箱功能
 2. 完善对 IE 用户的友善提醒
+
+### v4.100.1 (2020.8.21) by oistream
+
+1. Fix Bug
