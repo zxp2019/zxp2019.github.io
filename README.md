@@ -23,4 +23,4 @@ Markdown 格式来书写长文本。
 
 \[English\] \[[Chinese(Text File)](https://zxp2019.github.io/new.txt)\]（v4.6.3以后不再更新） \[Chinese(Markdown File)\]
 
-[直通车，开往最新版本](https://github.com/zxp2019/zxp2019.github.io/blob/master/README.md#v41000-2020821-by-oistream)
+[直通车，开往最新版本](https://github.com/zxp2019/zxp2019.github.io/blob/master/update.md#v41000-2020821-by-oistream)
