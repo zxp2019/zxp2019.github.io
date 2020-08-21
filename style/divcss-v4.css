@@ -382,6 +382,7 @@
 	bottom:0;
 	width:10%;
 	height:17%;
+	z-index:999;
 }
 #toolBoxUp
 {
@@ -417,6 +418,7 @@
 	width:4%;
 	height:6%;
 	text-align:center;
+	z-index:999;
 }
 #toolBoxHide i
 {
