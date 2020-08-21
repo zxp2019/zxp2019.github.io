@@ -369,3 +369,71 @@
 	padding-left:2px;
 	padding-right:2px;
 }
+#toolBox
+{
+	background-color:rgba(255,255,255,.90);
+	padding-top:0px;
+	margin:50px;
+	border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	color:black;
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:10%;
+	height:17%;
+}
+#toolBoxUp
+{
+	height:20%;
+}
+#toolBoxMain
+{
+	height:80%;
+	padding-top:10%;
+	padding-bottom:10%;
+	text-align:center;
+}
+#toolBoxUp button
+{
+	background-color:rgba(255,255,255,0);
+	border:none;
+}
+#toolBoxUp button:hover
+{
+	color:red;
+}
+#toolBoxHide
+{
+	background-color:rgba(255,255,255,.90);
+	padding-top:0px;
+	margin:50px;
+	border-radius:.5rem;
+	box-shadow: 1px 1px 5px rgba(136,136,136,.70);
+	color:black;
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:4%;
+	height:6%;
+	text-align:center;
+}
+#toolBoxHide i
+{
+	margin:0px;
+	font-size:25px;
+}
+#toolBoxHide button
+{
+	background-color:rgba(255,255,255,0);
+	border:none;
+}
+#toolBoxHide button:hover
+{
+	color:rgb(33,133,208);
+}
+#toolBoxMain i
+{
+	font-size:25px;
+	margin:0px;
+}
