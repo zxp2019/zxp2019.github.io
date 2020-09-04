@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>首页 - OIerHub</title>
+        <meta name="keywords" content="OIerHub,讨论,OI,BBS">
+        <link rel="stylesheet" type="text/css" href="../style/main.css">
+        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="../script/main.js"></script>
+    </head>
+    <body style="background-color:#ff9900">
+        <script>showMenu();</script>
+        <div id="titleContainer" style="height: 30%;">
+            <h1>OIerHub</h1>
+            <span>OIer/Devloper 的交流分享平台 | 正在搭建 | 咕咕咕</span>
+        </div>
+        <div id="main">
+            <div id="gitalk-container"></div>    <script type="text/javascript">
+                var gitalk = new Gitalk({
+            
+                // gitalk的主要参数
+                    clientID: '2c00a1a3c7fe31cced9d',
+                    clientSecret: '41a9cd57f80a33bb41d8a498ddd53e488097b3ab',
+                    repo: 'zxp2019.github.io',
+                    owner: 'zxp2019',
+                    admin: ['zxp2019'],
+                    id:window.location.pathname,
+                });
+                gitalk.render('gitalk-container');
+            </script>
+        </div>
+    </body>
+</html>

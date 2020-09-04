@@ -1,0 +1,102 @@
+#menu ul 
+{
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+    background-color:rgba(255,255,255,0);
+}
+#menu li
+{
+    background-color:rgba(255,255,255,.0);
+    float:left;
+}
+#menu li a 
+{
+    display:block;
+    color:rgba(5,5,5,.40);
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+    border-radius:.25rem;
+    font-weight:bold;
+    letter-spacing: 2px;
+}
+#menu li a:hover:not(.active) 
+{
+    color:rgb(0,0,0);
+}
+#menu li a.active 
+{
+    color:rgb(0,0,0);
+}
+
+#titleContainer
+{
+    padding-top:5%;
+    padding-left:7%;
+    padding-bottom:2%;
+    line-height:10px;
+}
+#titleContainer h1
+{
+    font-size:50px;
+    font-family:'Helvetica';
+    font-weight:bold;
+}
+#titleContainer span
+{
+    font-size:20px;
+    font-family:'Microsoft Yahei';
+    color:rgba(5,5,5,.50);
+}
+
+#nodeList
+{
+    padding-left:4%;
+    padding-right:4%;
+}
+#nodeList ul 
+{
+    list-style-type:none;
+    overflow:hidden;
+    background-color:rgba(255,255,255,0);
+}
+#nodeList ul li
+{
+    float:left;
+    background-color:white;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+    margin:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:30px;
+    padding-right:30px;
+    text-align:center;
+}
+#nodeList ul li a
+{
+    text-decoration:none;
+    color:inherit;
+}
+#nodeList ul li i.fa-asterisk
+{
+    font-size:30px;
+}
+#nodeList ul li span
+{
+    font-size:20px;
+    font-weight: bold;
+}
+
+#main
+{
+    background-color:white;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+    margin:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:30px;
+    padding-right:30px;
+    text-align:center;
+}
