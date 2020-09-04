@@ -1,7 +1,7 @@
 var menu=[
     {
         text:"首页",
-        href:""
+        href:"https://zxp2019.github.io/oierhub/"
     },
     {
         text:"OIstream",
