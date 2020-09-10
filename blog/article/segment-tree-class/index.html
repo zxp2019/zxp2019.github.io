@@ -43,7 +43,52 @@
 					<div class="item">
 						<a href="#1">
 							<br/>
-							<i class="fa fa-tag"></i> 顶部
+							<i class="fa fa-tag"></i> Part 1 . 基本框架
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					<div class="item">
+						<a href="#2">
+							<br/>
+							<i class="fa fa-tag"></i> Part 2 . 基本结构 - 结点
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					<div class="item">
+						<a href="#3">
+							<br/>
+							<i class="fa fa-tag"></i> Part 3 . 一些宏 &amp; 常量定义
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					<div class="item">
+						<a href="#4">
+							<br/>
+							<i class="fa fa-tag"></i> Part 4 . 构造函数 &amp; 析构函数 &amp; 赋值运算符
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					<div class="item">
+						<a href="#5">
+							<br/>
+							<i class="fa fa-tag"></i> Part 5 . 一些简单的辅助功能
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					<div class="item">
+						<a href="#6">
+							<br/>
+							<i class="fa fa-tag"></i> Part 6 . 重中之重
 							<br/>
 							<br/>
 						</a>
@@ -68,7 +113,7 @@
 <hr />
 <p>最终 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.419ex" height="2.11ex" viewBox="0 -806.1 1472 908.7" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E2-MJMAIN-41" d="M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z"></path><path stroke-width="0" id="E2-MJMAIN-43" d="M56 342Q56 428 89 500T174 615T283 681T391 705Q394 705 400 705T408 704Q499 704 569 636L582 624L612 663Q639 700 643 704Q644 704 647 704T653 705H657Q660 705 666 699V419L660 413H626Q620 419 619 430Q610 512 571 572T476 651Q457 658 426 658Q322 658 252 588Q173 509 173 342Q173 221 211 151Q232 111 263 84T328 45T384 29T428 24Q517 24 571 93T626 244Q626 251 632 257H660L666 251V236Q661 133 590 56T403 -21Q262 -21 159 83T56 342Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E2-MJMAIN-41"></use><use xlink:href="#E2-MJMAIN-43" x="750" y="0"></use></g></svg></span><script type="math/tex">\text{AC}</script> 记录：<a href='https://www.luogu.com.cn/record/38150770' target='_blank' class='url'>https://www.luogu.com.cn/record/38150770</a></p>
 <hr />
-<h1>Part 1. 基本框架</h1>
+<a name="1"><h1>Part 1. 基本框架</h1></a>
 <p>写出以下基本框架：</p>
 <pre><code class='language-cpp' lang='cpp'>#define QuickArray SegmentTree
 	template&lt;typename ValueT&gt; 
@@ -95,7 +140,7 @@
 			/*实现了大部分功能的私有函数 ( Part 6 ) */
 	};
 </code></pre>
-<h1>Part 2 基本结构 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.807ex" height="1.722ex" viewBox="0 -627.7 778 741.5" role="img" focusable="false" style="vertical-align: -0.264ex;"><defs><path stroke-width="0" id="E3-MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E3-MJMAIN-2212" x="0" y="0"></use></g></svg></span><script type="math/tex">-</script> 结点</h1>
+<a name="2"><h1>Part 2 基本结构 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.807ex" height="1.722ex" viewBox="0 -627.7 778 741.5" role="img" focusable="false" style="vertical-align: -0.264ex;"><defs><path stroke-width="0" id="E3-MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E3-MJMAIN-2212" x="0" y="0"></use></g></svg></span><script type="math/tex">-</script> 结点</h1></a>
 <p>结点的定义如下。</p>
 <pre><code class='language-cpp' lang='cpp'>#define IndexT int
 struct SgtNode
@@ -119,7 +164,7 @@ struct SgtNode
 };
 </code></pre>
 <p>注意赋值时用 <code>ValueT{}</code> 比 <code>0</code> 好，因为 <code>ValueT</code> 是一个模板类型，它可以是任意的类，它有可能并没有定义 <code>operator=(const int &amp;i)</code>。</p>
-<h1>Part 3 一些宏 &amp; 常量定义</h1>
+<a name="3"><h1>Part 3 一些宏 &amp; 常量定义</h1></a>
 <p>虽然标识符起得越详细越好（以至于 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.42ex" height="2.11ex" viewBox="0 -806.1 1903 908.7" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E8-MJMAIN-53" d="M55 507Q55 590 112 647T243 704H257Q342 704 405 641L426 672Q431 679 436 687T446 700L449 704Q450 704 453 704T459 705H463Q466 705 472 699V462L466 456H448Q437 456 435 459T430 479Q413 605 329 646Q292 662 254 662Q201 662 168 626T135 542Q135 508 152 480T200 435Q210 431 286 412T370 389Q427 367 463 314T500 191Q500 110 448 45T301 -21Q245 -21 201 -4T140 27L122 41Q118 36 107 21T87 -7T78 -21Q76 -22 68 -22H64Q61 -22 55 -16V101Q55 220 56 222Q58 227 76 227H89Q95 221 95 214Q95 182 105 151T139 90T205 42T305 24Q352 24 386 62T420 155Q420 198 398 233T340 281Q284 295 266 300Q261 301 239 306T206 314T174 325T141 343T112 367T85 402Q55 451 55 507Z"></path><path stroke-width="0" id="E8-MJMAIN-54" d="M36 443Q37 448 46 558T55 671V677H666V671Q667 666 676 556T685 443V437H645V443Q645 445 642 478T631 544T610 593Q593 614 555 625Q534 630 478 630H451H443Q417 630 414 618Q413 616 413 339V63Q420 53 439 50T528 46H558V0H545L361 3Q186 1 177 0H164V46H194Q264 46 283 49T309 63V339V550Q309 620 304 625T271 630H244H224Q154 630 119 601Q101 585 93 554T81 486T76 443V437H36V443Z"></path><path stroke-width="0" id="E8-MJMAIN-4C" d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q48 680 182 680Q324 680 348 683H360V637H333Q273 637 258 635T233 622L232 342V129Q232 57 237 52Q243 47 313 47Q384 47 410 53Q470 70 498 110T536 221Q536 226 537 238T540 261T542 272T562 273H582V268Q580 265 568 137T554 5V0H25V46H58Q100 47 109 49T128 61V622Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E8-MJMAIN-53"></use><use xlink:href="#E8-MJMAIN-54" x="556" y="0"></use><use xlink:href="#E8-MJMAIN-4C" x="1278" y="0"></use></g></svg></span><script type="math/tex">\text{STL}</script> 中都出现了 <code>uniform_int_distribution</code> 这么长的标识符），但毕竟写起来累，于是我采用了大量的宏定义以缩减代码长度。</p>
 <pre><code class='language-cpp' lang='cpp'>#define mb ((l+r)&gt;&gt;1)
 #define mid ((nodes[id].left+nodes[id].right)&gt;&gt;1)
@@ -134,7 +179,7 @@ struct SgtNode
 #define ROOT 1
 </code></pre>
 <p>这两个常数也私有了，但预计可以通过公有的函数访问他。</p>
-<h1>Part 4 构造函数 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.807ex" height="1.878ex" viewBox="0 -761.8 778 808.5" role="img" focusable="false" style="vertical-align: -0.108ex;"><defs><path stroke-width="0" id="E6-MJMAIN-26" d="M156 540Q156 620 201 668T302 716Q354 716 377 671T401 578Q401 505 287 386L274 373Q309 285 416 148L429 132L437 142Q474 191 543 309L562 341V349Q562 368 541 376T498 385H493V431H502L626 428Q709 428 721 431H727V385H712Q688 384 669 379T639 369T618 354T603 337T591 316T578 295Q537 223 506 176T464 117T454 104Q454 102 471 85T497 62Q543 24 585 24Q618 24 648 48T682 113V121H722V112Q721 94 714 75T692 32T646 -7T574 -22Q491 -19 414 42L402 51L391 42Q312 -22 224 -22Q144 -22 93 25T42 135Q42 153 46 169T55 197T74 225T96 249T125 278T156 308L195 347L190 360Q185 372 182 382T174 411T165 448T159 491T156 540ZM361 576Q361 613 348 646T305 679Q272 679 252 649T232 572Q232 497 255 426L259 411L267 420Q361 519 361 576ZM140 164Q140 103 167 64T240 24Q271 24 304 36T356 61T374 77Q295 156 235 262L220 292L210 310L193 293Q177 277 169 268T151 229T140 164Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E6-MJMAIN-26" x="0" y="0"></use></g></svg></span><script type="math/tex">\&</script> 析构函数 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.807ex" height="1.878ex" viewBox="0 -761.8 778 808.5" role="img" focusable="false" style="vertical-align: -0.108ex;"><defs><path stroke-width="0" id="E6-MJMAIN-26" d="M156 540Q156 620 201 668T302 716Q354 716 377 671T401 578Q401 505 287 386L274 373Q309 285 416 148L429 132L437 142Q474 191 543 309L562 341V349Q562 368 541 376T498 385H493V431H502L626 428Q709 428 721 431H727V385H712Q688 384 669 379T639 369T618 354T603 337T591 316T578 295Q537 223 506 176T464 117T454 104Q454 102 471 85T497 62Q543 24 585 24Q618 24 648 48T682 113V121H722V112Q721 94 714 75T692 32T646 -7T574 -22Q491 -19 414 42L402 51L391 42Q312 -22 224 -22Q144 -22 93 25T42 135Q42 153 46 169T55 197T74 225T96 249T125 278T156 308L195 347L190 360Q185 372 182 382T174 411T165 448T159 491T156 540ZM361 576Q361 613 348 646T305 679Q272 679 252 649T232 572Q232 497 255 426L259 411L267 420Q361 519 361 576ZM140 164Q140 103 167 64T240 24Q271 24 304 36T356 61T374 77Q295 156 235 262L220 292L210 310L193 293Q177 277 169 268T151 229T140 164Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E6-MJMAIN-26" x="0" y="0"></use></g></svg></span><script type="math/tex">\&</script> 赋值运算符</h1>
+<a name="4"><h1>Part 4 构造函数 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.807ex" height="1.878ex" viewBox="0 -761.8 778 808.5" role="img" focusable="false" style="vertical-align: -0.108ex;"><defs><path stroke-width="0" id="E6-MJMAIN-26" d="M156 540Q156 620 201 668T302 716Q354 716 377 671T401 578Q401 505 287 386L274 373Q309 285 416 148L429 132L437 142Q474 191 543 309L562 341V349Q562 368 541 376T498 385H493V431H502L626 428Q709 428 721 431H727V385H712Q688 384 669 379T639 369T618 354T603 337T591 316T578 295Q537 223 506 176T464 117T454 104Q454 102 471 85T497 62Q543 24 585 24Q618 24 648 48T682 113V121H722V112Q721 94 714 75T692 32T646 -7T574 -22Q491 -19 414 42L402 51L391 42Q312 -22 224 -22Q144 -22 93 25T42 135Q42 153 46 169T55 197T74 225T96 249T125 278T156 308L195 347L190 360Q185 372 182 382T174 411T165 448T159 491T156 540ZM361 576Q361 613 348 646T305 679Q272 679 252 649T232 572Q232 497 255 426L259 411L267 420Q361 519 361 576ZM140 164Q140 103 167 64T240 24Q271 24 304 36T356 61T374 77Q295 156 235 262L220 292L210 310L193 293Q177 277 169 268T151 229T140 164Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E6-MJMAIN-26" x="0" y="0"></use></g></svg></span><script type="math/tex">\&</script> 析构函数 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.807ex" height="1.878ex" viewBox="0 -761.8 778 808.5" role="img" focusable="false" style="vertical-align: -0.108ex;"><defs><path stroke-width="0" id="E6-MJMAIN-26" d="M156 540Q156 620 201 668T302 716Q354 716 377 671T401 578Q401 505 287 386L274 373Q309 285 416 148L429 132L437 142Q474 191 543 309L562 341V349Q562 368 541 376T498 385H493V431H502L626 428Q709 428 721 431H727V385H712Q688 384 669 379T639 369T618 354T603 337T591 316T578 295Q537 223 506 176T464 117T454 104Q454 102 471 85T497 62Q543 24 585 24Q618 24 648 48T682 113V121H722V112Q721 94 714 75T692 32T646 -7T574 -22Q491 -19 414 42L402 51L391 42Q312 -22 224 -22Q144 -22 93 25T42 135Q42 153 46 169T55 197T74 225T96 249T125 278T156 308L195 347L190 360Q185 372 182 382T174 411T165 448T159 491T156 540ZM361 576Q361 613 348 646T305 679Q272 679 252 649T232 572Q232 497 255 426L259 411L267 420Q361 519 361 576ZM140 164Q140 103 167 64T240 24Q271 24 304 36T356 61T374 77Q295 156 235 262L220 292L210 310L193 293Q177 277 169 268T151 229T140 164Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E6-MJMAIN-26" x="0" y="0"></use></g></svg></span><script type="math/tex">\&</script> 赋值运算符</h1></a>
 <p>有本书管这叫五大函数的，大概是指</p>
 <ul>
 <li>拷贝构造函数</li>
@@ -207,7 +252,7 @@ IndexT theSize;
 	update(id);
 }
 </code></pre>
-<h1>Part 5 . 一些简单的辅助功能</h1>
+<a name="5"><h1>Part 5 . 一些简单的辅助功能</h1></a>
 <p>这些函数显然是要公有的。真的很简单，每个函数一行完事。</p>
 <pre><code class='language-cpp' lang='cpp'>IndexT size() const{return theSize;} // 获得大小
 IndexT maxSize() const{return MAX_SIZE;} // 获得最大可容纳的大小
@@ -216,7 +261,7 @@ bool empty() const{return theSize==0;} // 判空函数
 int depth() const{return (int)(log2(theSize))+2;} // 获得线段树深度（根结点深度为 1）
 void clear(){init();} // 清空线段树
 </code></pre>
-<h1>Part 6 . 重中之重</h1>
+<a name="6"><h1>Part 6 . 重中之重</h1></a>
 <p>下面会说到线段树的核心的实现。由于本文的重点是封装，因此不会过多涉及到线段树这种数据结构本身。</p>
 <p>先实现一些私有的函数，它们辅助整个线段树的核心过程。</p>
 <pre><code class='language-cpp' lang='cpp'>void update(const IndexT &amp;id){nodes[id].sum=nodes[lc].sum+nodes[rc].sum;} // 更新结点
