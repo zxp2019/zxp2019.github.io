@@ -1,0 +1,282 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta name="keywords" content="P6565,6565,P6566,6566,P1596,1596,最急救助,观星,Lake,Counting,NOI,Online,3,P,普及,USACO,10,OCT,S,Silver,银组,题解,刷题,oistream,iostream">
+        <meta name="description" content="NOI Online 3 P 最急救助（洛谷 P6565）；NOI Online #3 P 观星（洛谷 P6566）；USACO10OCT S Lake Counting（洛谷 P1596）">
+        <title>
+			【刷题日记】2020-09-10 - OIstream 的博客 | 每一行代码都是改变世界的一份能量！
+        </title>
+        <link rel="stylesheet" type="text/css" href="../../../style/allcss-v4.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/divcss-v4.css">
+		<link rel="stylesheet" type="text/css" href="../../../style/decocss-v4.css">
+		<link rel="icon" type="image/ico" href="../../../img/!icon-bird.ico"/>
+		<!--导入 Font Awesome-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<!---->
+		<!--导入 MathJax 的 LaTeX 渲染-->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async
+				src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+		</script>
+		<!---->
+		<!--导入不蒜子统计器-->
+		<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <!---->
+        <!-- 导入Gitalk 支持文件-->
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+	<!---->
+	</head>
+	<body>
+		<script src="../../../script/browser.js"></script>
+		<script src="../../../script/showTool.js"></script>
+		<div id="container" style="font-family:微软雅黑">
+	<div id="menu">
+		<script src="../../../script/showMenu.js"></script>
+	</div>
+	<div class="line">
+			<div id="side">
+			<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;">
+		<h2 class="center"><i class="fa fa-tags"></i> 全部标签</h2>
+		</div>
+		<div id="sideall">
+				<div id="divlist">
+					<div class="item">
+						<a href="#1">
+							<br/>
+							<i class="fa fa-tag"></i> P6565 [NOI Online 3 J]最急救助
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					<div class="item">
+						<a href="#2">
+							<br/>
+							<i class="fa fa-tag"></i> P1596 [USACO10OCT S]Lake Counting
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					<div class="item">
+						<a href="#3">
+							<br/>
+							<i class="fa fa-tag"></i> P6566 [NOI Online 3 J]观星
+							<br/>
+							<br/>
+						</a>
+						
+					</div>
+					</div>
+			</div>
+		</div>
+		<div id="main">
+            <div class="blogItem" style="text-align:center;">
+                <span class="h">【刷题日记】2020-09-10</span><br/><br/>
+                <small><i class="fa fa-tag"></i> 题解&nbsp;&nbsp;<i class="fa fa-book"></i> C++ 语言 | 字符串，算法 | 搜索 | BFS&nbsp;&nbsp;<i class="fa fa-clock-o"></i> 2020-09-17 21:49&nbsp;&nbsp;<i class="fa fa-check-square-o"></i> 2020-09-17 21:49&nbsp;&nbsp;<i class="fa fa-file"></i> C++</small>
+                <span id="busuanzi_container_page_pv" style="font-size:13px;">
+                    <i class="fa fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+</span>
+            </div>
+            <div id="longBlog"><p>把今天刷的三道题都写一遍吧。</p>
+<a name="1"><h1>P6565 [NOI Online 3 J]最急救助</h1></a>
+<p><strong>题意简述</strong>：给定一个字符串，求出其中子串 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.658ex" height="1.41ex" viewBox="0 -504.6 1575 607.1" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E2-MJTT-73" d="M72 317Q72 361 108 396T229 439Q231 439 245 439T268 440Q303 439 324 435T353 427T363 423L372 432Q380 440 397 440Q430 440 430 395Q430 390 430 380T429 366V335Q429 311 422 302T387 293Q364 293 355 300T346 316T343 336T325 353Q306 364 257 364Q209 364 178 351T147 317Q147 284 231 272Q327 256 357 247Q458 210 458 129V121Q458 74 413 34T271 -6Q246 -6 224 -3T189 5T165 14T150 22T144 26Q142 23 139 18T135 11T132 6T128 1T124 -2T119 -4T113 -5T104 -6Q84 -6 78 6T71 43Q71 48 71 60T72 79Q72 132 73 141T81 157Q90 166 115 166Q135 166 142 162T157 140Q168 108 191 90T260 70Q297 70 323 76T361 91T379 110T384 129Q384 157 346 171T247 195T165 212Q119 228 96 256T72 317Z"></path><path stroke-width="0" id="E2-MJTT-6F" d="M52 216Q52 318 118 379T261 440Q343 440 407 378T472 216Q472 121 410 58T262 -6Q176 -6 114 58T52 216ZM388 225Q388 281 351 322T261 364Q213 364 175 325T136 225Q136 158 174 114T262 70T350 114T388 225Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E2-MJTT-73"></use><use xlink:href="#E2-MJTT-6F" x="525" y="0"></use><use xlink:href="#E2-MJTT-73" x="1050" y="0"></use></g></svg></span><script type="math/tex">\texttt{sos}</script> 的个数。</p>
+<p>那么，直接暴力即可。</p>
+<pre><code class='language-cpp' lang='cpp'>int findSub(string str)
+{
+ 	int res=0;
+ 	for(int i=0;i&lt;str.length();i++){if(str.substr(i,3)==&quot;sos&quot;){res++;}}
+    return res;
+}
+</code></pre>
+<p>其中 <code>str.substr(i,3)</code> 返回一个字符串，为自下标 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.801ex" height="1.994ex" viewBox="0 -755.9 345 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E3-MJMATHI-69" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E3-MJMATHI-69" x="0" y="0"></use></g></svg></span><script type="math/tex">i</script> 开始长度为 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1.161ex" height="1.994ex" viewBox="0 -755.9 500 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E4-MJMAIN-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E4-MJMAIN-33" x="0" y="0"></use></g></svg></span><script type="math/tex">3</script> 的子串。</p>
+<p>主函数如下。</p>
+<pre><code class='language-cpp' lang='cpp'>int main()
+{
+    int n,maxNum=0;
+    string name,signal;
+    vector&lt;string&gt; maxName;
+    read(n);
+    for(int i=1;i&lt;=n;i++)
+    {
+        cin&gt;&gt;name&gt;&gt;signal;
+        int num=findSub(signal);
+        if(num&gt;maxNum)
+        {
+		    maxNum=num;
+		    maxName.clear();
+		    maxName.push_back(name);
+        }
+        else if(num==maxNum){maxName.push_back(name);}
+    }
+    for(int i=0;i&lt;maxName.size();i++){cout&lt;&lt;maxName[i]&lt;&lt;&quot; &quot;;}
+    cout&lt;&lt;endl&lt;&lt;maxNum&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<p>注意如果多个信号子串相同，则要输出全部的人名，为了这一点做了一些特殊处理。</p>
+<p>（顺便吐槽一句学校机房电脑，不支持 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="7.613ex" height="2.227ex" viewBox="0 -806.1 3278 958.9" role="img" focusable="false" style="vertical-align: -0.355ex;"><defs><path stroke-width="0" id="E5-MJMAIN-43" d="M56 342Q56 428 89 500T174 615T283 681T391 705Q394 705 400 705T408 704Q499 704 569 636L582 624L612 663Q639 700 643 704Q644 704 647 704T653 705H657Q660 705 666 699V419L660 413H626Q620 419 619 430Q610 512 571 572T476 651Q457 658 426 658Q322 658 252 588Q173 509 173 342Q173 221 211 151Q232 111 263 84T328 45T384 29T428 24Q517 24 571 93T626 244Q626 251 632 257H660L666 251V236Q661 133 590 56T403 -21Q262 -21 159 83T56 342Z"></path><path stroke-width="0" id="E5-MJMAIN-2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path><path stroke-width="0" id="E5-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E5-MJMAIN-43"></use><use xlink:href="#E5-MJMAIN-2B" x="722" y="0"></use><use xlink:href="#E5-MJMAIN-2B" x="1500" y="0"></use><use xlink:href="#E5-MJMAIN-31" x="2278" y="0"></use><use xlink:href="#E5-MJMAIN-31" x="2778" y="0"></use></g></svg></span><script type="math/tex">\text{C++11}</script>，还贼卡，到现在还是 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.582ex" height="1.994ex" viewBox="0 -755.9 2834 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E6-MJMAIN-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path><path stroke-width="0" id="E6-MJMAIN-2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path><path stroke-width="0" id="E6-MJMAIN-39" d="M352 287Q304 211 232 211Q154 211 104 270T44 396Q42 412 42 436V444Q42 537 111 606Q171 666 243 666Q245 666 249 666T257 665H261Q273 665 286 663T323 651T370 619T413 560Q456 472 456 334Q456 194 396 97Q361 41 312 10T208 -22Q147 -22 108 7T68 93T121 149Q143 149 158 135T173 96Q173 78 164 65T148 49T135 44L131 43Q131 41 138 37T164 27T206 22H212Q272 22 313 86Q352 142 352 280V287ZM244 248Q292 248 321 297T351 430Q351 508 343 542Q341 552 337 562T323 588T293 615T246 625Q208 625 181 598Q160 576 154 546T147 441Q147 358 152 329T172 282Q197 248 244 248Z"></path><path stroke-width="0" id="E6-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E6-MJMAIN-34"></use><use xlink:href="#E6-MJMAIN-2E" x="500" y="0"></use><use xlink:href="#E6-MJMAIN-39" x="778" y="0"></use><use xlink:href="#E6-MJMAIN-2E" x="1278" y="0"></use><use xlink:href="#E6-MJMAIN-39" x="1556" y="0"></use><use xlink:href="#E6-MJMAIN-2E" x="2056" y="0"></use><use xlink:href="#E6-MJMAIN-32" x="2334" y="0"></use></g></svg></span><script type="math/tex">4.9.9.2</script>，必须加 <code>system(&quot;pause&quot;)</code>）</p>
+<a name="2"><h1>P1596 [USACO10OCT S]Lake Counting</h1></a>
+<p>这是下一题的铺垫。</p>
+<p><strong>题意简述</strong>：给定一个图，求八连通连通块的个数。</p>
+<p>先简述一下求连通块的过程吧。</p>
+<p>首先输入图，转成二维数组，以样例为例（<code>W</code> 为水，<code>.</code> 为旱）</p>
+<pre><code class='language-plain' lang='plain'>W........WW.
+.WWW.....WWW
+....WW...WW.
+.........WW.
+.........W..
+..W......W..
+.W.W.....WW.
+W.W.W.....W.
+.W.W......W.
+..W.......W.
+</code></pre>
+<p>广搜的过程如下。</p>
+<ul>
+<li>从当前点向八个方向扩展，扩展出八个目标</li>
+<li>剪掉目标越界的情况</li>
+<li>剪掉目标已经被标记访问过的情况（否则会死循环）</li>
+<li>剪掉目标为旱地的情况（不然搜出来整个图就一个连通块）</li>
+<li>将目标入队并标记已访问（在接下来的代码中把不同连通块标成了不同的颜色，但在此题中没有必要）</li>
+
+</ul>
+<p>然后一定要注意起始结点要标记访问。</p>
+<p>从 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.162ex" height="2.577ex" viewBox="0 -806.1 2222.7 1109.7" role="img" focusable="false" style="vertical-align: -0.705ex;"><defs><path stroke-width="0" id="E7-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E7-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E7-MJMAIN-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path stroke-width="0" id="E7-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E7-MJMAIN-28" x="0" y="0"></use><use xlink:href="#E7-MJMAIN-31" x="389" y="0"></use><use xlink:href="#E7-MJMAIN-2C" x="889" y="0"></use><use xlink:href="#E7-MJMAIN-31" x="1333" y="0"></use><use xlink:href="#E7-MJMAIN-29" x="1833" y="0"></use></g></svg></span><script type="math/tex">(1,1)</script> 开始搜，搜过一轮后就出现了一个连通块。然后找到下一个没被标记访问的水（样例中是 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="6.324ex" height="2.577ex" viewBox="0 -806.1 2722.7 1109.7" role="img" focusable="false" style="vertical-align: -0.705ex;"><defs><path stroke-width="0" id="E8-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E8-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E8-MJMAIN-2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path><path stroke-width="0" id="E8-MJMAIN-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path stroke-width="0" id="E8-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E8-MJMAIN-28" x="0" y="0"></use><use xlink:href="#E8-MJMAIN-31" x="389" y="0"></use><use xlink:href="#E8-MJMAIN-2C" x="889" y="0"></use><g transform="translate(1333,0)"><use xlink:href="#E8-MJMAIN-31"></use><use xlink:href="#E8-MJMAIN-30" x="500" y="0"></use></g><use xlink:href="#E8-MJMAIN-29" x="2333" y="0"></use></g></svg></span><script type="math/tex">(1,10)</script>），从它开始搜，找出第二个连通块。以此类推。</p>
+<p><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.452ex" height="2.11ex" viewBox="0 -806.1 1917 908.7" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E10-MJMAIN-42" d="M131 622Q124 629 120 631T104 634T61 637H28V683H229H267H346Q423 683 459 678T531 651Q574 627 599 590T624 512Q624 461 583 419T476 360L466 357Q539 348 595 302T651 187Q651 119 600 67T469 3Q456 1 242 0H28V46H61Q103 47 112 49T131 61V622ZM511 513Q511 560 485 594T416 636Q415 636 403 636T371 636T333 637Q266 637 251 636T232 628Q229 624 229 499V374H312L396 375L406 377Q410 378 417 380T442 393T474 417T499 456T511 513ZM537 188Q537 239 509 282T430 336L329 337H229V200V116Q229 57 234 52Q240 47 334 47H383Q425 47 443 53Q486 67 511 104T537 188Z"></path><path stroke-width="0" id="E10-MJMAIN-46" d="M128 619Q121 626 117 628T101 631T58 634H25V680H582V676Q584 670 596 560T610 444V440H570V444Q563 493 561 501Q555 538 543 563T516 601T477 622T431 631T374 633H334H286Q252 633 244 631T233 621Q232 619 232 490V363H284Q287 363 303 363T327 364T349 367T372 373T389 385Q407 403 410 459V480H450V200H410V221Q407 276 389 296Q381 303 371 307T348 313T327 316T303 317T284 317H232V189L233 61Q240 54 245 52T270 48T333 46H360V0H348Q324 3 182 3Q51 3 36 0H25V46H58Q100 47 109 49T128 61V619Z"></path><path stroke-width="0" id="E10-MJMAIN-53" d="M55 507Q55 590 112 647T243 704H257Q342 704 405 641L426 672Q431 679 436 687T446 700L449 704Q450 704 453 704T459 705H463Q466 705 472 699V462L466 456H448Q437 456 435 459T430 479Q413 605 329 646Q292 662 254 662Q201 662 168 626T135 542Q135 508 152 480T200 435Q210 431 286 412T370 389Q427 367 463 314T500 191Q500 110 448 45T301 -21Q245 -21 201 -4T140 27L122 41Q118 36 107 21T87 -7T78 -21Q76 -22 68 -22H64Q61 -22 55 -16V101Q55 220 56 222Q58 227 76 227H89Q95 221 95 214Q95 182 105 151T139 90T205 42T305 24Q352 24 386 62T420 155Q420 198 398 233T340 281Q284 295 266 300Q261 301 239 306T206 314T174 325T141 343T112 367T85 402Q55 451 55 507Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E10-MJMAIN-42"></use><use xlink:href="#E10-MJMAIN-46" x="708" y="0"></use><use xlink:href="#E10-MJMAIN-53" x="1361" y="0"></use></g></svg></span><script type="math/tex">\text{BFS}</script> 代码如下。</p>
+<pre><code class='language-cpp' lang='cpp'>struct Point
+{
+    int x;
+    int y;
+};
+queue&lt;Point&gt; q;
+int movX[9]={0,0,0,-1,1,-1,-1,1,1}; // 这是一个小技巧，用数组表示出了每一次移动的坐标变化，下面就一次循环解决
+int movY[9]={0,-1,1,0,0,-1,1,-1,1};
+int n,m;
+bool water[1501][1501];
+int dict[1501][1501];
+
+bool out(Point p){return p.x&lt;1 || p.x&gt;n || p.y&lt;1 || p.y&gt;m;} // 判越界
+void bfs(Point start,int color)
+{
+	dict[start.x][start.y]=color;
+    q.push(start);
+    while(!q.empty())
+    {
+        Point now=q.front(); // 当前结点
+        q.pop();
+        for(int i=1;i&lt;=8;i++)
+        {
+            Point newp; // 目标结点
+            newp.x=now.x+movX[i];
+            newp.y=now.y+movY[i];
+            if(out(newp)){continue;}
+            if(!water[newp.x][newp.y]){continue;}
+            if(dict[newp.x][newp.y]!=0){continue;}
+            dict[newp.x][newp.y]=color;
+            q.push(newp);
+		}
+    }
+}
+</code></pre>
+<p>主函数如下。</p>
+<pre><code class='language-cpp' lang='cpp'>int main()
+{
+ 	read(n); read(m);
+ 	string line;
+ 	for(int i=1;i&lt;=n;i++)
+ 	{
+        cin&gt;&gt;line;
+        for(int j=0;j&lt;line.length();j++)
+        {
+		    if(line[j]==&#39;W&#39;){water[i][j+1]=true;}
+		    else if(line[j]==&#39;.&#39;){water[i][j+1]=false;}
+		}
+    }
+	int sum=0;
+    for(int i=1;i&lt;=n;i++)
+    {
+		for(int j=1;j&lt;=m;j++)
+		{
+            if(dict[i][j]==0 &amp;&amp; water[i][j]){bfs((Point){i,j},++sum);}
+		}
+    }
+    cout&lt;&lt;sum&lt;&lt;endl;
+ 	return 0;
+}
+</code></pre>
+<a name="3"><h1>P6566 [NOI Online 3 J]观星</h1></a>
+<p>观的我两眼冒金星。</p>
+<p><strong>题意简述</strong>：给定一个图，将图中星星数量相同的八连通连通块合称为<strong>星系</strong>，求星系的数量及含星星数量最多的星系。</p>
+<p>读完题，然后忘了 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.452ex" height="2.11ex" viewBox="0 -806.1 1917 908.7" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E10-MJMAIN-42" d="M131 622Q124 629 120 631T104 634T61 637H28V683H229H267H346Q423 683 459 678T531 651Q574 627 599 590T624 512Q624 461 583 419T476 360L466 357Q539 348 595 302T651 187Q651 119 600 67T469 3Q456 1 242 0H28V46H61Q103 47 112 49T131 61V622ZM511 513Q511 560 485 594T416 636Q415 636 403 636T371 636T333 637Q266 637 251 636T232 628Q229 624 229 499V374H312L396 375L406 377Q410 378 417 380T442 393T474 417T499 456T511 513ZM537 188Q537 239 509 282T430 336L329 337H229V200V116Q229 57 234 52Q240 47 334 47H383Q425 47 443 53Q486 67 511 104T537 188Z"></path><path stroke-width="0" id="E10-MJMAIN-46" d="M128 619Q121 626 117 628T101 631T58 634H25V680H582V676Q584 670 596 560T610 444V440H570V444Q563 493 561 501Q555 538 543 563T516 601T477 622T431 631T374 633H334H286Q252 633 244 631T233 621Q232 619 232 490V363H284Q287 363 303 363T327 364T349 367T372 373T389 385Q407 403 410 459V480H450V200H410V221Q407 276 389 296Q381 303 371 307T348 313T327 316T303 317T284 317H232V189L233 61Q240 54 245 52T270 48T333 46H360V0H348Q324 3 182 3Q51 3 36 0H25V46H58Q100 47 109 49T128 61V619Z"></path><path stroke-width="0" id="E10-MJMAIN-53" d="M55 507Q55 590 112 647T243 704H257Q342 704 405 641L426 672Q431 679 436 687T446 700L449 704Q450 704 453 704T459 705H463Q466 705 472 699V462L466 456H448Q437 456 435 459T430 479Q413 605 329 646Q292 662 254 662Q201 662 168 626T135 542Q135 508 152 480T200 435Q210 431 286 412T370 389Q427 367 463 314T500 191Q500 110 448 45T301 -21Q245 -21 201 -4T140 27L122 41Q118 36 107 21T87 -7T78 -21Q76 -22 68 -22H64Q61 -22 55 -16V101Q55 220 56 222Q58 227 76 227H89Q95 221 95 214Q95 182 105 151T139 90T205 42T305 24Q352 24 386 62T420 155Q420 198 398 233T340 281Q284 295 266 300Q261 301 239 306T206 314T174 325T141 343T112 367T85 402Q55 451 55 507Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E10-MJMAIN-42"></use><use xlink:href="#E10-MJMAIN-46" x="708" y="0"></use><use xlink:href="#E10-MJMAIN-53" x="1361" y="0"></use></g></svg></span><script type="math/tex">\text{BFS}</script> 怎么写。</p>
+<p>于是硬调了一个小时多。</p>
+<p>然后突然脑抽觉得二维数组开 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="12.13ex" height="1.994ex" viewBox="0 -755.9 5222.4 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;"><defs><path stroke-width="0" id="E11-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E11-MJMAIN-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path stroke-width="0" id="E11-MJMAIN-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path stroke-width="0" id="E11-MJMAIN-D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E11-MJMAIN-31"></use><use xlink:href="#E11-MJMAIN-35" x="500" y="0"></use><use xlink:href="#E11-MJMAIN-30" x="1000" y="0"></use><use xlink:href="#E11-MJMAIN-30" x="1500" y="0"></use><use xlink:href="#E11-MJMAIN-D7" x="2222" y="0"></use><g transform="translate(3222,0)"><use xlink:href="#E11-MJMAIN-31"></use><use xlink:href="#E11-MJMAIN-35" x="500" y="0"></use><use xlink:href="#E11-MJMAIN-30" x="1000" y="0"></use><use xlink:href="#E11-MJMAIN-30" x="1500" y="0"></use></g></g></svg></span><script type="math/tex">1500\times 1500</script> 会爆，结果用了 <code>map</code>，然后出现了玄学的编译错误。</p>
+<p>最后调了半天。</p>
+<hr />
+<p>有了上题的铺垫，本题应该很容易了，只需要搜出连通块（在搜连通块的时候顺带统计一下连通块大小）然后暴力统计星系即可。使用桶优化至 <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.973ex" height="2.577ex" viewBox="0 -806.1 2141 1109.7" role="img" focusable="false" style="vertical-align: -0.705ex;"><defs><path stroke-width="0" id="E12-MJMATHI-4F" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path><path stroke-width="0" id="E12-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path><path stroke-width="0" id="E12-MJMATHI-6E" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path><path stroke-width="0" id="E12-MJMAIN-29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E12-MJMATHI-4F" x="0" y="0"></use><use xlink:href="#E12-MJMAIN-28" x="763" y="0"></use><use xlink:href="#E12-MJMATHI-6E" x="1152" y="0"></use><use xlink:href="#E12-MJMAIN-29" x="1752" y="0"></use></g></svg></span><script type="math/tex">O(n)</script>。</p>
+<p>加了桶的主函数代码如下。</p>
+<pre><code class='language-cpp' lang='cpp'>int bucket[100005];
+
+int main()
+{
+ 	read(n); read(m);
+ 	string line;
+ 	for(int i=1;i&lt;=n;i++)
+ 	{
+        cin&gt;&gt;line;
+        for(int j=0;j&lt;line.length();j++)
+        {
+		    if(line[j]==&#39;*&#39;){star[i][j+1]=true;}
+		    else if(line[j]==&#39;.&#39;){star[i][j+1]=false;}
+		}
+    }
+	int sum=0,maxCnt=0; // maxCnt 是最大星座大小
+    for(int i=1;i&lt;=n;i++)
+    {
+		for(int j=1;j&lt;=m;j++)
+		{
+            if(dict[i][j]==0 &amp;&amp; star[i][j])
+			{
+		        int temp=bfs((Point){i,j},++sum);
+		        bucket[temp]++; // 桶
+		        maxCnt=max(maxCnt,temp);
+			}
+		}
+    }	
+    int maxx=0,cnt=0;
+    for(int i=1;i&lt;=maxCnt;i++) // 因为不可能有更大的星座，所以只需要 for 到 maxCnt，在一些数据下起到了优化作用
+    {
+		if(bucket[i]!=0){cnt++;}
+	    maxx=max(maxx,bucket[i]*i); // bucket[i]*i 即星系内星星个数
+	}
+    cout&lt;&lt;cnt&lt;&lt;&quot; &quot;&lt;&lt;maxx&lt;&lt;endl;
+ 	return 0;
+}
+</code></pre>
+</div>
+<div id="lbGitalk">
+    <div id="gitalk-container"></div>    <script type="text/javascript">
+var gitalk = new Gitalk({
+
+// gitalk的主要参数
+    clientID: '2c00a1a3c7fe31cced9d',
+    clientSecret: '41a9cd57f80a33bb41d8a498ddd53e488097b3ab',
+    repo: 'zxp2019.github.io',
+    owner: 'zxp2019',
+    admin: ['zxp2019'],
+    id:window.location.pathname,
+	distractionFreeMode: false,
+});
+gitalk.render('gitalk-container');
+</script>   
+</div>
+</div>
+</div>
+<div id="footer">
+    <br/>
+    <script src="../../../script/showFooter.js"></script>
+</div>
+</div>
+</body>
+</html>
