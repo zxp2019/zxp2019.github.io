@@ -371,4 +371,4 @@ Add:
 
 ### v4.100.11 (2020.9.20) by oistream
 
-1. Fix Bug ( #39 )
+1. Fix Bug ( [#39](https://github.com/zxp2019/zxp2019.github.io/issues/39) )
