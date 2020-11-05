@@ -372,3 +372,11 @@ Add:
 ### v4.100.11 (2020.9.20) by oistream
 
 1. Fix Bug ( [#39](https://github.com/zxp2019/zxp2019.github.io/issues/39) )
+
+## v5
+
+### v5.0.0 (2020.11.5) by oistream
+
+一整个月没更新祭（不是
+
+1. 更换维护博客文章列表的方式，现在只需更改 JS 数组（类似 JSON 语法）即可维护文章列表，后续会将博客页面也换成这个。
