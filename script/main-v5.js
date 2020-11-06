@@ -1,34 +1,3 @@
-var faicons = {
-    "tag" : "fa fa-tag", 
-    "knowledge" : "fa fa-book",
-    "postDate" : "fa fa-clock-o", 
-    "updateDate" : "fa fa-check-square-o", 
-    "language" : "fa fa-file"
-};
-
-var articles = [
-    {
-        title : "Not Found",
-        url : "", 
-        tags : ["Undefined"], 
-        knowledges : ["Undefined"], 
-        postDate : "Undefined", 
-        updateDate : "Undefined", 
-        language : "", 
-        description : "出现了一些错误 qwq 请联系博主解决问题。错误代号：ERR_ARTICLE_0_INCLUDED。"
-    }, 
-    {
-        title : "「置顶」新版博客测试",
-        url : "blog-v4-test", 
-        tags : ["GMQ", "AK", "IOI"], 
-        knowledges : ["其它"], 
-        postDate : "2020-05-16 14:32", 
-        updateDate : "2020-05-16 14:32", 
-        language : "C++", 
-        description : "快来看看新版博客长什么样吧！"
-    }, 
-];
-
 function showArticle(idx) {
     arc = articles[idx];
     buf = "";
@@ -76,9 +45,9 @@ function showArticle(idx) {
     iKnow.className = faicons["knowledge"];
 
     knowText = "";
-    for(i = 0; i < arc.knowledges.length; i++) {
-        knowText += arc.tags[i];
-        if(i != arc.knowledges.length - 1) {
+    for(sai = 0; sai < arc.knowledges.length; sai++) {
+        knowText += arc.tags[sai];
+        if(sai != arc.knowledges.length - 1) {
             knowText += ", ";
         }
     }
@@ -116,4 +85,32 @@ function showArticle(idx) {
     blogItem.appendChild(descb);
     tDescb = document.createTextNode(arc.description);
     descb.appendChild(tDescb);
+}
+
+function showArticles(l, r) {
+    for(sasi = l; sasi <= r; sasi++) {
+        showArticle(sasi);
+    }
+}
+
+function showFirstNArticles(n) {
+    showArticles(1,n);
+}
+
+function articleSum() {
+    return articles.length;
+}
+
+function addArticle(ttitle, uurl, ttags, kknowledges, ppostDate, uupdateDate, llanguage, ddescription) {
+    newArc = {
+        title : ttitle, 
+        url : uurl, 
+        tags : ttags, 
+        knowledges : kknowledges, 
+        postDate : ppostDate, 
+        updateDate : uupdateDate, 
+        language : llanguage, 
+        description : ddescription
+    }
+    articles.push(newArc);
 }
