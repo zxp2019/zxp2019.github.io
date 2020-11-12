@@ -16,8 +16,22 @@
 	<!-- -->
 	<link rel="icon" type="image/ico" href="../img/!icon-bird.ico"/>
 	<script>
+		function showReminder()
+            {
+                document.getElementById("reminder").style=""
+            }
+            function closeReminder()
+            {
+                document.getElementById("reminder").style="display:none;"
+            }
+		function remind() {
+			document.getElementById("ok").innerHTML="抱歉 QAQ 由于博客文章列表维护代码更新，搜索功能暂时失效";
+			showReminder();
+		}
 		function ssearch()
 		{
+			remind();
+			return ;
 			hideTag()
 			var names=document.getElementsByName("tt")
 			var key=document.getElementById("searchT").value
@@ -31,6 +45,8 @@
 		}
 		function showAll()
 		{
+			remind();
+			return ;
 			showTag()
 			var names=document.getElementsByName("tt")
 			for(i=0;i<names.length;i++)
@@ -39,8 +55,20 @@
 			}
 		}
 	</script>
+	<style>
+		#reminder {
+			text-align:center;position:fixed;right:30%;left:30%;top:200px;box-shadow:1px 1px 5px rgba(136,136,136,.70);border-radius:.25rem;background-color:rgb(255,255,255);padding:20px;
+		}
+	</style>
 </head>
 <body>
+	<div id="reminder" style="display:none">
+		<div id="faContainer" style="color:rgb(212, 4, 4);font-size:100px;">
+			<i class="fa fa-close"></i>
+		</div>
+		<h1 id="ok"></h1>
+		<button type="button" class="newButton" onclick="closeReminder()"><i class="fa fa-check-square-o"></i>知道了</button>
+	</div>
 	<script src="../script/browser.js"></script>
 	<script src="../script/showTool.js"></script>
 	<div id="container">
@@ -80,9 +108,9 @@
 			<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;text-align:center;">
 				<input type="text" placeholder="输入要查找的关键字" id="searchT" style="width:50%;"><button class="newButton" onclick="ssearch()"><i class="fa fa-search" style="padding-right:0px;margin-right:0px;"></i></button><button class="newButton" onclick="showAll()"><i class="fa fa-arrow-circle-o-left" style="padding-right:0px;margin-right:0px;"></i></button>
 				</div>
-			<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;text-align:center;">
+			<!-- <div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;text-align:center;">
 				<button class="newButton" onclick="hideList()"><i class="fa fa-angle-up"></i>隐藏</button><button class="newButton" onclick="showList()"><i class="fa fa-angle-down"></i>展开</button>
-				</div>
+				</div> -->
 				<!--<div id="divlist">
 					<div class="item">
 						<a href="#get-0">
