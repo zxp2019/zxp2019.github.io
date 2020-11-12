@@ -93,12 +93,30 @@ function showArticles(l, r) {
     }
 }
 
+function showArticlesR(l, r) {
+    for(sasi = r; sasi >= l; sasi--) {
+        showArticle(sasi);
+    }
+}
+
 function showFirstNArticles(n) {
     showArticles(1,n);
 }
 
+function showNewNArticles(n) {
+    showArticlesR(articles.length-n,articles.length-1);
+}
+
+function showAllArticles() {
+    showArticles(1,articles.length-1);
+}
+
+function showAllArticlesR() {
+    showArticlesR(1,articles.length-1);
+}
+
 function articleSum() {
-    return articles.length;
+    return articles.length-1;
 }
 
 function addArticle(ttitle, uurl, ttags, kknowledges, ppostDate, uupdateDate, llanguage, ddescription) {
