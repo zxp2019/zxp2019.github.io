@@ -1,9 +1,30 @@
+function parseKeyWord(key) {
+    var s = "";
+    var arr = new Array();
+    for(pkwi = 0; pkwi < key.length; pkwi++) {
+        if(key[pkwi] == ' ') {
+            if(s != "") {
+                arr.push(s);
+            }
+            s = "";
+        }
+        else {
+            s += key.substr(pkwi, 1);
+        }
+    }
+    if(s != "") {
+        arr.push(s);
+    }
+    return arr;
+}
+
+
 function showArticle(idx) {
     arc = articles[idx];
     buf = "";
     a = document.createElement("a");
     document.getElementById("blogList").appendChild(a);
-    a.href = "/blog/" + arc.url + "/index.html";
+    a.href = "/blog/article/" + arc.url + "/index.html";
 
     blogItem = document.createElement("div");
     a.appendChild(blogItem);
@@ -46,7 +67,7 @@ function showArticle(idx) {
 
     knowText = "";
     for(sai = 0; sai < arc.knowledges.length; sai++) {
-        knowText += arc.tags[sai];
+        knowText += arc.knowledges[sai];
         if(sai != arc.knowledges.length - 1) {
             knowText += ", ";
         }
@@ -131,4 +152,29 @@ function addArticle(ttitle, uurl, ttags, kknowledges, ppostDate, uupdateDate, ll
         description : ddescription
     }
     articles.push(newArc);
+}
+
+function clearList() {
+    document.getElementById("blogList").innerHTML="";
+}
+
+function searchKeyword(key) {
+    for(ski = articles.length - 1; ski >= 1; ski--) {
+        if(articles[ski].title.indexOf(key) >= 0) {
+            showArticle(ski);
+            vis[ski] = true;
+        }
+    }
+    for(ski = articles.length - 1; ski >= 1; ski--) {
+        if((articles[ski].description.indexOf(key) >= 0) && (!vis[ski])) {
+            showArticle(ski);
+            vis[ski] = true;
+        }
+    }
+} 
+
+function searchKeywords(arr) {
+    for(sksi = 0; sksi < arr.length; sksi++) {
+        searchKeyword(arr[sksi]);
+    }
 }
