@@ -439,3 +439,7 @@
 	font-size:25px;
 	margin:0px;
 }
+
+#reminder {
+	text-align:center;position:fixed;right:30%;left:30%;top:200px;box-shadow:1px 1px 5px rgba(136,136,136,.70);border-radius:.25rem;background-color:rgb(255,255,255);padding:20px;
+}
