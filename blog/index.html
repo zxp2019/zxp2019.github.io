@@ -15,51 +15,6 @@
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 	<!-- -->
 	<link rel="icon" type="image/ico" href="../img/!icon-bird.ico"/>
-	<script>
-		function showReminder()
-            {
-                document.getElementById("reminder").style=""
-            }
-            function closeReminder()
-            {
-                document.getElementById("reminder").style="display:none;"
-            }
-		function remind() {
-			document.getElementById("ok").innerHTML="抱歉 QAQ 由于博客文章列表维护代码更新，搜索功能暂时失效";
-			showReminder();
-		}
-		function ssearch()
-		{
-			remind();
-			return ;
-			hideTag()
-			var names=document.getElementsByName("tt")
-			var key=document.getElementById("searchT").value
-			for(i=0;i<names.length;i++)
-			{
-				if(names[i].innerHTML.indexOf(key)==-1)
-				{
-					document.getElementById((i+1).toString()).style="display:none;"
-				}
-			}
-		}
-		function showAll()
-		{
-			remind();
-			return ;
-			showTag()
-			var names=document.getElementsByName("tt")
-			for(i=0;i<names.length;i++)
-			{
-				document.getElementById((i+1).toString()).style=""
-			}
-		}
-	</script>
-	<style>
-		#reminder {
-			text-align:center;position:fixed;right:30%;left:30%;top:200px;box-shadow:1px 1px 5px rgba(136,136,136,.70);border-radius:.25rem;background-color:rgb(255,255,255);padding:20px;
-		}
-	</style>
 </head>
 <body>
 	<div id="reminder" style="display:none">
@@ -73,40 +28,14 @@
 	<script src="../script/showTool.js"></script>
 	<div id="container">
 	<div id="menu">
-	<!--
-	<div class="floatLeft">
-	<div class="line">
-	<div class="logo"><a href=""><strong style="font-size:27px;">OIstream 的博客</strong></a></div>
-	<strong><a href="./blog/aboutme.html"  target="_blank" style="font-size:17px;"><i class="fa fa-user"></i>&nbsp;关于我</a></strong>
-	</div>
-	</div>
-	<div class="floatRight">
-	<strong><a href=""  target="_blank" class="lis"><i class="fa fa-check"></i>&nbsp;主页</a></strong>
-	<strong><a href="./blog/index.html"  target="_blank" class="lis"><i class="fa fa-rss"></i>&nbsp;博客</a></strong>
-	<strong><a href="./class/index.html"  target="_blank" class="lis"><i class="fa fa-book"></i>&nbsp;知识</a></strong>
-	<strong><a href="./live/index.html"  target="_blank" class="lis"><i class="fa fa-comments"></i>&nbsp;动态</a></strong>
-	<strong><a href="./live/index.html"  target="_blank" class="lis"><i class="fa fa-pencil"></i>&nbsp;练习</a></strong>
-	<strong><a href="./dev/index.html"  target="_blank" class="lis"><i class="fa fa-code"></i>&nbsp;Develop</a></strong>
-	</div>
-	-->
 	<script src="../script/showMenu.js"></script>
 	</div>
-		<!--
-		<div id="header">
-	<div class="logo"><strong style="font-size:40px;">博客</strong></div>
-	<br/>
-	<script src="../script/showHeader.js"></script>
-	</div>
-	-->
 		
 		<div class="line">
 			<div id="side">
-			<!--<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;text-align:center;">
-		<h2 class="center"><i class="fa fa-tags"></i> 全部标签</h2>
-		</div>-->
 		<div id="sideall">
 			<div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;text-align:center;">
-				<input type="text" placeholder="输入要查找的关键字" id="searchT" style="width:50%;"><button class="newButton" onclick="ssearch()"><i class="fa fa-search" style="padding-right:0px;margin-right:0px;"></i></button><button class="newButton" onclick="showAll()"><i class="fa fa-arrow-circle-o-left" style="padding-right:0px;margin-right:0px;"></i></button>
+				<input type="text" placeholder="输入关键字" title = "以半角空格分隔关键字" id="searchT" style="width:50%;"><button class="newButton" title = "点击搜索！" onclick="ssearch()"><i class="fa fa-search" style="padding-right:0px;margin-right:0px;"></i></button><button class="newButton" title = "显示全部文章" onclick="showAll()"><i class="fa fa-arrow-circle-o-left" style="padding-right:0px;margin-right:0px;"></i></button>
 				</div>
 			<!-- <div id="blog" style="margin-top:0px;margin-left:0px;margin-right:0px;text-align:center;">
 				<button class="newButton" onclick="hideList()"><i class="fa fa-angle-up"></i>隐藏</button><button class="newButton" onclick="showList()"><i class="fa fa-angle-down"></i>展开</button>
