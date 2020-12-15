@@ -1,3 +1,5 @@
+/* 图标 : 此处用于配置您的博客所使用图标 */
+/* Icons */
 var faicons = {
     "tag" : "fa fa-tag", 
     "knowledge" : "fa fa-book",
@@ -6,6 +8,8 @@ var faicons = {
     "language" : "fa fa-file"
 };
 
+/* 文章列表：此处用于维护您的列表中文章的各项信息 */
+/* Articles */
 var articles = [
     {
         title : "Not Found",
@@ -15,7 +19,8 @@ var articles = [
         postDate : "Undefined", 
         updateDate : "Undefined", 
         language : "", 
-        description : "出现了一些错误 qwq 请联系博主解决问题。错误代码：ERR_ARTICLE_0_INDEX。"
+        description : "出现了一些错误 qwq 请联系博主解决问题。错误代码：ERR_ARTICLE_0_INDEX。", 
+        priority : -1
     }, 
     {
         title : "关于我", 
@@ -25,7 +30,8 @@ var articles = [
         postDate : "2020-03-01 08:00",
         updateDate : "2020-03-01 08:00", 
         language : "",
-        description : "我是谁？我在干什么？"
+        description : "我是谁？我在干什么？", 
+        priority : 100
     },
     {
         title : "「题解」洛谷 P2440 木材加工", 
@@ -35,7 +41,8 @@ var articles = [
         postDate : "2020-04-13 13:57",
         updateDate : "2020-04-13 13:57", 
         language : "C++",
-        description : "二分。"
+        description : "二分。", 
+        priority : 2
     },
     {
         title : "差分与前缀和", 
@@ -45,7 +52,8 @@ var articles = [
         postDate : "2020-05-18 14:18",
         updateDate : "2020-05-18 14:18", 
         language : "C++",
-        description : "两种对于序列的常见操作，以及它们扩展在树上的情况。"
+        description : "两种对于序列的常见操作，以及它们扩展在树上的情况。", 
+        priority : 10
     },
     {
         title : "How to use Github well?", 
@@ -55,7 +63,8 @@ var articles = [
         postDate : "2020-05-19 8:44",
         updateDate : "2020-05-19 8:44", 
         language : "",
-        description : "帮助你快速了解 Github！"
+        description : "帮助你快速了解 Github！", 
+        priority : 10
     },
     {
         title : "「题解」洛谷 P1503 鬼子进村", 
@@ -65,7 +74,8 @@ var articles = [
         postDate : "2020-05-29 12:24",
         updateDate : "2020-05-29 12:24", 
         language : "C++",
-        description : "平衡树 + 栈维护。"
+        description : "平衡树 + 栈维护。", 
+        priority : 2
     },
     {
         title : "「题解」洛谷 P3377【模板】左偏树（可并堆）", 
@@ -75,7 +85,8 @@ var articles = [
         postDate : "2020-06-13 15:43",
         updateDate : "2020-06-13 15:43", 
         language : "C++",
-        description : "可并堆模板题。我遇到的一些 bug 及解决思路。"
+        description : "可并堆模板题。我遇到的一些 bug 及解决思路。", 
+        priority : 10
     },
     {
         title : "矩阵", 
@@ -85,7 +96,8 @@ var articles = [
         postDate : "2020-07-06 20:18",
         updateDate : "2020-07-06 20:18", 
         language : "",
-        description : "矩阵的基础知识。"
+        description : "矩阵的基础知识。", 
+        priority : 10
     },
     {
         title : "ACSL 2019-2020 游记", 
@@ -95,7 +107,8 @@ var articles = [
         postDate : "2020-07-10 11:18",
         updateDate : "2020-07-10 11:18", 
         language : "",
-        description : "ACSL 考些啥？这个比赛又是什么样？"
+        description : "ACSL 考些啥？这个比赛又是什么样？", 
+        priority : 3
     },
     {
         title : "「题解」USACO2006NOV-Gold Corn Fields", 
@@ -105,7 +118,8 @@ var articles = [
         postDate : "2020-07-11 22:23",
         updateDate : "2020-07-11 22:23", 
         language : "C++",
-        description : "状态压缩动态规划。降低维度。"
+        description : "状态压缩动态规划。降低维度。", 
+        priority : 2
     },
     {
         title : "使用 Gitalk 实现评论功能", 
@@ -115,7 +129,8 @@ var articles = [
         postDate : "2020-07-15 14:32",
         updateDate : "2020-07-15 14:32", 
         language : "JavaScript",
-        description : "帮助你快速了解 Gitalk！"
+        description : "帮助你快速了解 Gitalk！", 
+        priority : 10
     },
     {
         title : "火车头优化", 
@@ -125,7 +140,8 @@ var articles = [
         postDate : "2020-07-15 18:29",
         updateDate : "2020-07-15 18:29", 
         language : "C++",
-        description : "传说中的卡常神器，但是..."
+        description : "传说中的卡常神器，但是...", 
+        priority : 2
     },
     {
         title : "「图册」什么是“打表出奇迹”", 
@@ -135,7 +151,8 @@ var articles = [
         postDate : "2020-07-17 16:48",
         updateDate : "2020-07-17 16:48", 
         language : "",
-        description : "暴力出奇迹，骗分过样例；数学先打表，DP看运气。"
+        description : "暴力出奇迹，骗分过样例；数学先打表，DP看运气。", 
+        priority : 2
     },
     {
         title : "「转载」北极冻土里的代码，是GitHub的终极浪漫”", 
@@ -145,7 +162,8 @@ var articles = [
         postDate : "2020-07-20 16:45",
         updateDate : "2020-07-20 16:45", 
         language : "",
-        description : "两千年后的历史学家们，如何发现我们的代码"
+        description : "两千年后的历史学家们，如何发现我们的代码", 
+        priority : 3
     },
     {
         title : "「题解」NOIP1997 棋盘问题",
@@ -155,7 +173,8 @@ var articles = [
         postDate : "2020-08-06 18:52", 
         updateDate : "2020-08-06 18:52", 
         language : "C++", 
-        description : "搜索题。"
+        description : "搜索题。", 
+        priority : 2
     }, 
     {
         title : "「题解」CSP2019 格雷码",
@@ -165,7 +184,8 @@ var articles = [
         postDate : "2020-08-17 18:30", 
         updateDate : "2020-08-17 18:30", 
         language : "C++", 
-        description : "臭名昭著卡变量类型题。"
+        description : "臭名昭著卡变量类型题。", 
+        priority : 2
     }, 
     {
         title : "封装一棵线段树",
@@ -175,7 +195,8 @@ var articles = [
         postDate : "2020-09-08 21:39", 
         updateDate : "2020-09-08 21:39", 
         language : "C++", 
-        description : "有新鲜出炉立即取用的源码哦"
+        description : "有新鲜出炉立即取用的源码哦", 
+        priority : 10
     }, 
     {
         title : "【刷题日记】2020-09-10",
@@ -185,7 +206,8 @@ var articles = [
         postDate : "2020-09-17 21:49", 
         updateDate : "2020-09-17 21:49", 
         language : "C++", 
-        description : "NOI Online 3 P 最急救助（洛谷 P6565）；NOI Online #3 P 观星（洛谷 P6566）；USACO10OCT S Lake Counting（洛谷 P1596）"
+        description : "NOI Online 3 P 最急救助（洛谷 P6565）；NOI Online #3 P 观星（洛谷 P6566）；USACO10OCT S Lake Counting（洛谷 P1596）", 
+        priority : 2
     }, 
     {
         title : "「置顶」新版博客测试",
@@ -195,6 +217,7 @@ var articles = [
         postDate : "2020-05-16 14:32", 
         updateDate : "2020-05-16 14:32", 
         language : "C++", 
-        description : "快来看看新版博客长什么样吧！"
+        description : "快来看看新版博客长什么样吧！", 
+        priority : 0
     }, 
 ];
