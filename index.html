@@ -16,7 +16,7 @@
 	<!-- -->
 	<!-- 导入Gitalk 支持文件 -->
 	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 	
 	<link rel="icon" type="image/ico" href="./img/!icon-bird.ico"/>
 	<script>
@@ -185,8 +185,10 @@
 	<div id="side">
 		<div class="rightdiv">
 			<h2><i class="fa fa-user" id="aboutMe"></i>&nbsp;关于我</h2>
+		</div>
+		<div class = "rightdiv">
 			<div id="peopleContainer">
-				<script>showPeople(1,"peopleContainer");</script>
+				<script>showMyself("peopleContainer");</script>
 			</div>
 		</div>
 		<div class="rightdiv">
@@ -238,7 +240,8 @@
 		</div>
 		<div class="rightdiv">
 			<h2><i class="fa fa-link"></i>&nbsp;友链</h2>
-			<a href="https://gmq12.github.io">frost_walker6</a> | Luogu@<a href="https://www.luogu.com.cn/user/132929">frost_walker</a> | Github@<a href="https://github.com/gmq12">gmq12</a>
+			
+			<!-- <a href="https://gmq12.github.io">frost_walker6</a> | Luogu@<a href="https://www.luogu.com.cn/user/132929">frost_walker</a> | Github@<a href="https://github.com/gmq12">gmq12</a>
 			<br/>
 			<br/>
 			Luogu@<a href="https://www.luogu.com.cn/user/131109">robin_gao</a> | Codeforces@<a href="https://codeforces.com/profile/grobcj">grobcj</a>
@@ -249,7 +252,10 @@
 			<br/>
 			<a href="https://www.xiaozhi.xin">小智编程</a>
 			<br/>
-			<br/>
+			<br/> -->
+		</div>
+		<div id = "friendList">
+			<script>showAllFriends("friendList");</script>
 		</div>
 		<div class="rightdiv">
 			<h2><i class="fa fa-star"></i>&nbsp;光荣榜</h2>
