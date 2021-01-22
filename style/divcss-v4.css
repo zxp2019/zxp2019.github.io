@@ -25,6 +25,10 @@
 	display:flex;
 	justify-content:center;
 }
+.leftLine {
+	display:flex;
+	justify-content:left;
+}
 /*logo下面的副标题*/
 /*中文*/
 .sentence-chn
@@ -454,6 +458,10 @@
 }
 .people td {
 	padding:5px;
+}
+.peopleInfoContainer {
+	padding-top : 10px;
+	padding-left:10px;
 }
 .peopleImgContainer {
 	padding:5px;
