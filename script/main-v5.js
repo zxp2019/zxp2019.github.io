@@ -206,7 +206,7 @@ function remind(word) {
 function showPeople(id, faDivId) {
     var pinc = document.createElement("div");
     document.getElementById(faDivId).appendChild(pinc);
-    pinc.className = "line peopleInfoContainer";
+    pinc.className = "leftLine peopleInfoContainer";
 
     var pic = document.createElement("div");
     pinc.appendChild(pic);
@@ -337,6 +337,22 @@ function showPeople(id, faDivId) {
         aLb.appendChild(tLb2);
     }
 
+    if(peoples[id].codeforces != "") {
+        var trcf = document.createElement("tr");
+        tb.appendChild(trcf);
+        var tdcf1 = document.createElement("td");
+        trcf.appendChild(tdcf1);
+        var iCf = document.createTextNode("Codeforces");
+        tdcf1.appendChild(iCf);
+        var tdcf2 = document.createElement("td");
+        trgh.appendChild(tdcf2);
+        var aCf = document.createElement("a");
+        tdcf2.appendChild(aCf);
+        aCf.href = "https://codeforces.ml/profile/" + peoples[id].codeforces;
+        var tCf2 = document.createTextNode(peoples[id].codeforces);
+        aCf.appendChild(tCf2);
+    }
+
     if(peoples[id].githubUserName != "") {
         var trgh = document.createElement("tr");
         tb.appendChild(trgh);
@@ -350,7 +366,65 @@ function showPeople(id, faDivId) {
         var aGh = document.createElement("a");
         tdgh2.appendChild(aGh);
         aGh.href = "https://github.com/" + peoples[id].githubUserName;
-        var tGh2 = document.createTextNode(peoples[id].githubName);
+        var tGh2;
+        if(peoples[id].githubName != "") {
+            tGh2 = document.createTextNode(peoples[id].githubName);
+        }
+        else {
+            tGh2 = document.createTextNode(peoples[id].githubUserName);
+        }
         aGh.appendChild(tGh2);
+    }
+
+    if(peoples[id].bilibiliId != "") {
+        var trbb = document.createElement("tr");
+        tb.appendChild(trbb);
+        var tdbb1 = document.createElement("td");
+        trbb.appendChild(tdbb1);
+        var iBb = document.createTextNode("Bilibili");
+        tdbb1.appendChild(iBb);
+        var tdbb2 = document.createElement("td");
+        trbb.appendChild(tdbb2);
+        var aBb = document.createElement("a");
+        tdbb2.appendChild(aBb);
+        aBb.href = "https://space.bilibili.com/" + peoples[id].bilibiliId;
+        var tBb2 = document.createTextNode(peoples[id].bilibiliUser);
+        aBb.appendChild(tBb2);
+    }
+
+    if(peoples[id].zhihuURL != "") {
+        var trzh = document.createElement("tr");
+        tb.appendChild(trzh);
+        var tdzh1 = document.createElement("td");
+        trzh.appendChild(tdzh1);
+        var iZh = document.createTextNode("知乎");
+        tdzh1.appendChild(iZh);
+        var tdzh2 = document.createElement("td");
+        trzh.appendChild(tdzh2);
+        var aZh = document.createElement("a");
+        tdzh2.appendChild(aZh);
+        aZh.href = "https://www.zhihu.com/people/" + peoples[id].zhihuURL;
+        var tZh2 = document.createTextNode(peoples[id].zhihuUser);
+        aZh.appendChild(tZh2);
+    }
+}
+function showMyself(faDivId) {
+    showPeople(myself, faDivId);
+}
+function peopleSum() {
+    return peoples.length - 1;
+}
+function showAllFriends(ffDivId) {
+    for(var safi = 1; safi <= peopleSum(); safi++) {
+        if(safi == myself) {
+            continue;
+        }
+        var rd = document.createElement("div");
+        document.getElementById(ffDivId).appendChild(rd);
+        rd.className = "rightdiv";
+        var pc = document.createElement("div");
+        rd.appendChild(pc);
+        pc.id = "peopleContainer" + safi.toString();
+        showPeople(safi, pc.id);
     }
 }
