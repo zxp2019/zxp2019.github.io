@@ -28,9 +28,9 @@ var peoples = [
         githubUserName : "zxp2019",
         codeforces : "",
         bilibiliUser : "",
-        biliId : "",
+        bilibiliId : "",
         zhihuURL : "",
-        zhihuUser : "",
+        zhihuUser : ""
     },
     {
         name : "zxp2019",
@@ -47,14 +47,14 @@ var peoples = [
         githubUserName : "zxp2019",
         codeforces : "",
         bilibiliUser : "",
-        biliId : "",
+        bilibiliId : "",
         zhihuURL : "",
-        zhihuUser : "",
+        zhihuUser : ""
     },
     {
         name : "gmq12",
-        img : "https://cdn.luogu.com.cn/upload/usericon/132929.png",
-        description : "物理神犇，Orz",
+        img : "https://avatars.githubusercontent.com/u/68062598?s=460&u=0ebb631b16d2d89d1701dd105a21e33006870098&v=4",
+        description : "物理神犇",
         mail : "",
         qq : "",
         wechat : "",
@@ -66,12 +66,12 @@ var peoples = [
         githubUserName : "gmq12",
         codeforces : "",
         bilibiliUser : "",
-        biliId : "",
+        bilibiliId : "",
         zhihuURL : "",
-        zhihuUser : "",
+        zhihuUser : ""
     }
 ];
-var mySelf = 1;
+var myself = 1;
 
 
 /* 文章列表：此处用于维护您的列表中文章的各项信息 */
@@ -286,4 +286,4 @@ var articles = [
         description : "快来看看新版博客长什么样吧！", 
         priority : 0
     }, 
-];e
+];
