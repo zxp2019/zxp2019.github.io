@@ -13,7 +13,6 @@
 /*圆形图片*/
 .circle
 {
-	border:1px solid blue;
 	border-radius:75%;
 }
 /*按钮*/
