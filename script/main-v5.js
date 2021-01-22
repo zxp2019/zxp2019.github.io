@@ -201,3 +201,156 @@ function remind(word) {
 	document.getElementById("ok").innerHTML=word;
 	showReminder();
 }
+
+/* Show A People */
+function showPeople(id, faDivId) {
+    var pinc = document.createElement("div");
+    document.getElementById(faDivId).appendChild(pinc);
+    pinc.className = "line peopleInfoContainer";
+
+    var pic = document.createElement("div");
+    pinc.appendChild(pic);
+    pic.className = "peopleImgContainer";
+
+    var im = document.createElement("img");
+    pic.appendChild(im);
+    im.src = peoples[id].img;
+    im.className = "circle";
+
+    var poc = document.createElement("div");
+    pinc.appendChild(poc);
+    poc.className = "peopleOtherContainer";
+
+    var pocb = document.createElement("b");
+    poc.appendChild(pocb);
+    var pocbt = document.createTextNode(peoples[id].name);
+    pocb.appendChild(pocbt);
+
+    var br1 = document.createElement("br");
+    poc.appendChild(br1);
+
+    var pocs = document.createElement("span");
+    poc.appendChild(pocs);
+    var pocst = document.createTextNode(peoples[id].description);
+    pocs.appendChild(pocst);
+
+    var pc = document.createElement("div");
+    document.getElementById(faDivId).appendChild(pc);
+    pc.style = "font-size:16px;";
+
+    var tb = document.createElement("table");
+    pc.appendChild(tb);
+    tb.className = "people";
+
+    if(peoples[id].mail != "") {
+        var trmail = document.createElement("tr");
+        tb.appendChild(trmail);
+        var tdmail1 = document.createElement("td");
+        trmail.appendChild(tdmail1);
+        var iMail = document.createElement("i");
+        tdmail1.appendChild(iMail);
+        iMail.className = faicons["mail"];
+        var tdmail2 = document.createElement("td");
+        trmail.appendChild(tdmail2);
+        var aMail = document.createElement("a");
+        tdmail2.appendChild(aMail);
+        aMail.href = "mailto:" + peoples[id].mail;
+        var tMail2 = document.createTextNode(peoples[id].mail);
+        aMail.appendChild(tMail2);
+    }
+    
+    if(peoples[id].website != "") {
+        var trwebs = document.createElement("tr");
+        tb.appendChild(trwebs);
+        var tdwebs1 = document.createElement("td");
+        trwebs.appendChild(tdwebs1);
+        var iWebs = document.createTextNode("Website");
+        tdwebs1.appendChild(iWebs);
+        var tdwebs2 = document.createElement("td");
+        trwebs.appendChild(tdwebs2);
+        var aWebs = document.createElement("a");
+        tdwebs2.appendChild(aWebs);
+        aWebs.href = peoples[id].website;
+        var tWebs2 = document.createTextNode(peoples[id].website);
+        aWebs.appendChild(tWebs2);
+    }
+    
+    if(peoples[id].qq != "") {
+        var trqq = document.createElement("tr");
+        tb.appendChild(trqq);
+        var tdqq1 = document.createElement("td");
+        trqq.appendChild(tdqq1);
+        var iQq = document.createTextNode("QQ");
+        tdqq1.appendChild(iQq);
+        var tdqq2 = document.createElement("td");
+        trqq.appendChild(tdqq2);
+        var aQq = document.createElement("a");
+        tdqq2.appendChild(aQq);
+        var tQq2 = document.createTextNode(peoples[id].qq);
+        aQq.appendChild(tQq2);
+    }
+    
+    if(peoples[id].wechat != "") {
+        var trwc = document.createElement("tr");
+        tb.appendChild(trwc);
+        var tdwc1 = document.createElement("td");
+        trwc.appendChild(tdwc1);
+        var iWc = document.createTextNode("微信");
+        tdwc1.appendChild(iWc);
+        var tdwc2 = document.createElement("td");
+        trwc.appendChild(tdwc2);
+        var aWc = document.createElement("a");
+        tdwc2.appendChild(aWc);
+        var tWc2 = document.createTextNode(peoples[id].wechat);
+        aWc.appendChild(tWc2);
+    }
+
+    if(peoples[id].luoguUser != "") {
+        var trlg = document.createElement("tr");
+        tb.appendChild(trlg);
+        var tdlg1 = document.createElement("td");
+        trlg.appendChild(tdlg1);
+        var iLg = document.createTextNode("洛谷");
+        tdlg1.appendChild(iLg);
+        var tdlg2 = document.createElement("td");
+        trlg.appendChild(tdlg2);
+        var aLg = document.createElement("a");
+        tdlg2.appendChild(aLg);
+        aLg.href = "https://www.luogu.com.cn/user/" + peoples[id].luoguUid + "/";
+        var tLg2 = document.createTextNode(peoples[id].luoguUser);
+        aLg.appendChild(tLg2);
+    }
+
+    if(peoples[id].libreojUser != "") {
+        var trlb = document.createElement("tr");
+        tb.appendChild(trlb);
+        var tdlb1 = document.createElement("td");
+        trlb.appendChild(tdlb1);
+        var iLb = document.createTextNode("LOJ");
+        tdlb1.appendChild(iLb);
+        var tdlb2 = document.createElement("td");
+        trlb.appendChild(tdlb2);
+        var aLb = document.createElement("a");
+        tdlb2.appendChild(aLb);
+        aLb.href = "https://loj.ac/u/" + peoples[id].libreojUser;
+        var tLb2 = document.createTextNode(peoples[id].libreojUser);
+        aLb.appendChild(tLb2);
+    }
+
+    if(peoples[id].githubUserName != "") {
+        var trgh = document.createElement("tr");
+        tb.appendChild(trgh);
+        var tdgh1 = document.createElement("td");
+        trgh.appendChild(tdgh1);
+        var iGh = document.createElement("i");
+        tdgh1.appendChild(iGh);
+        iGh.className = faicons["github"];
+        var tdgh2 = document.createElement("td");
+        trgh.appendChild(tdgh2);
+        var aGh = document.createElement("a");
+        tdgh2.appendChild(aGh);
+        aGh.href = "https://github.com/" + peoples[id].githubUserName;
+        var tGh2 = document.createTextNode(peoples[id].githubName);
+        aGh.appendChild(tGh2);
+    }
+}
