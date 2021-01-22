@@ -24,7 +24,6 @@
 {
 	display:flex;
 	justify-content:center;
-
 }
 /*logo下面的副标题*/
 /*中文*/
@@ -442,4 +441,31 @@
 
 #reminder {
 	text-align:center;position:fixed;right:30%;left:30%;top:200px;box-shadow:1px 1px 5px rgba(136,136,136,.70);border-radius:.25rem;background-color:rgb(255,255,255);padding:20px;
+}
+
+.people {
+	text-align:left;
+	padding-left:10px;
+	padding-bottom:10px;
+	width:100%;
+	overflow:hidden;
+	white-space: normal;
+	word-break:break-all;
+}
+.people td {
+	padding:5px;
+}
+.peopleImgContainer {
+	padding:5px;
+}
+.peopleImgContainer img {
+	width:45px;
+	height:45px;
+}
+.peopleOtherContainer {
+	text-align:left;
+	padding:5px;
+}
+.peopleOtherContainer span {
+	font-size:14px;
 }
