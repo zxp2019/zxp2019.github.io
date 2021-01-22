@@ -14,9 +14,10 @@
 	<!-- font-awesome 图标库-->
 	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 	<!-- -->
-	<!-- 导入Gitalk 支持文件 -->
+	<!-- 导入Gitalk 支持文件
 	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 	<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+	 -->
 	
 	<link rel="icon" type="image/ico" href="./img/!icon-bird.ico"/>
 	<script>
@@ -140,8 +141,8 @@
 	<div class="line" style="padding:5px;">
 	<div id="main">
 	<div id="notice">
-	<i class="fa fa-info"></i> &nbsp; <strong>动态</strong>&nbsp;&nbsp;<small><i class="fa fa-clock-o"></i>&nbsp;2020-08-20 18:50</small><br/>
-	<p>博客翻新中... 新的版本号较为奇异 [Doge]</p>
+	<i class="fa fa-info"></i> &nbsp; <strong>动态</strong>&nbsp;&nbsp;<small><i class="fa fa-clock-o"></i>&nbsp;2021-01-22 12:39</small><br/>
+	<p>博客正在更新中，最近可能不会发文 QAQ</p>
 	</div>
 	<div id="blog">
 		<h2 class="center"><i class="fa fa-calendar-o"></i>&nbsp;最新博文&nbsp;&nbsp;&nbsp;&nbsp;<a style="font-size:small;" href="./blog/index.html">查看更多</a></h2>
@@ -184,17 +185,9 @@
 	
 	<div id="side">
 		<div class="rightdiv">
-			<h2><i class="fa fa-user"></i>&nbsp;关于我</h2>
-			<img src="./img/!icon-bird.png" class="circle" width="200" height="200"/>
-			<br/>
-			<div style="font-size:20px;">
-			<i class="fa fa-envelope-o"></i> <a href="mailto:zxp1863@163.com">zxp1863@163.com</a>
-			<br/>
-			洛谷 <a href="https://www.luogu.com.cn/user/180720/">zxp_oistream</a>
-			<br/>
-			LibreOJ <a href="https://loj.ac/user/18624/">oistream</a>
-			<br/>
-			<i class="fa fa-github"></i> <a href="https://github.com/zxp2019/">zxp2019</a>
+			<h2><i class="fa fa-user" id="aboutMe"></i>&nbsp;关于我</h2>
+			<div id="peopleContainer">
+				<script>showPeople(1,"peopleContainer");</script>
 			</div>
 		</div>
 		<div class="rightdiv">
