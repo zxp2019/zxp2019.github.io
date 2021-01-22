@@ -5,8 +5,74 @@ var faicons = {
     "knowledge" : "fa fa-book",
     "postDate" : "fa fa-clock-o", 
     "updateDate" : "fa fa-check-square-o", 
-    "language" : "fa fa-file"
+    "language" : "fa fa-file",
+    "mail" : "fa fa-envelope-o",
+    "github" : "fa fa-github"
 };
+
+/* 联系人信息：存储自己和好友的信息 */
+/* Peoples */
+var peoples = [
+    {
+        name : "zxp2019",
+        img : "https://zxp2019.github.io/img/!icon-bird.png",
+        description : "OIstreamBlog 创建者，蒟蒻",
+        mail : "zxp1863@163.com",
+        website : "https://zxp2019.github.io/",
+        qq : "",
+        wechat : "",
+        luoguUser : "oistr",
+        luoguUid : "180720",
+        libreojUser : "oistream",
+        githubName : "oistream",
+        githubUserName : "zxp2019",
+        codeforces : "",
+        bilibiliUser : "",
+        biliId : "",
+        zhihuURL : "",
+        zhihuUser : "",
+    },
+    {
+        name : "zxp2019",
+        img : "https://zxp2019.github.io/img/!icon-bird.png",
+        description : "OIstreamBlog 创建者，蒟蒻",
+        mail : "zxp1863@163.com",
+        qq : "",
+        wechat : "",
+        website : "https://zxp2019.github.io/",
+        luoguUser : "oistr",
+        luoguUid : "180720",
+        libreojUser : "oistream",
+        githubName : "oistream",
+        githubUserName : "zxp2019",
+        codeforces : "",
+        bilibiliUser : "",
+        biliId : "",
+        zhihuURL : "",
+        zhihuUser : "",
+    },
+    {
+        name : "gmq12",
+        img : "https://cdn.luogu.com.cn/upload/usericon/132929.png",
+        description : "物理神犇，Orz",
+        mail : "",
+        qq : "",
+        wechat : "",
+        website : "https://gmq12.github.io/",
+        luoguUser : "frost_walker",
+        luoguUid : "132929",
+        libreojUser : "frost_walker",
+        githubName : "gmq12",
+        githubUserName : "gmq12",
+        codeforces : "",
+        bilibiliUser : "",
+        biliId : "",
+        zhihuURL : "",
+        zhihuUser : "",
+    }
+];
+var mySelf = 1;
+
 
 /* 文章列表：此处用于维护您的列表中文章的各项信息 */
 /* Articles */
@@ -220,4 +286,4 @@ var articles = [
         description : "快来看看新版博客长什么样吧！", 
         priority : 0
     }, 
-];
+];e
