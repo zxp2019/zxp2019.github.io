@@ -202,8 +202,10 @@ function remind(word) {
 	showReminder();
 }
 
-/* Show A People */
+/* Show People */
 function showPeople(id, faDivId) {
+    // console.log(faDivId);
+    // console.log(document.getElementById(faDivId));
     var pinc = document.createElement("div");
     document.getElementById(faDivId).appendChild(pinc);
     pinc.className = "leftLine peopleInfoContainer";
@@ -429,9 +431,30 @@ function showAllFriends(ffDivId) {
     }
 }
 
+/* Website */
+function websiteSum() {
+    return websites.length-1;
+}
+function randomWebsite() {
+    var index = Math.floor(Math.random() * websiteSum()) + 1;
+    document.getElementById("imgToShow").src = websites[index].img;
+    document.getElementById("websiteLink").href = websites[index].url;
+    document.getElementById("websiteText").style = "display : none;";
+}
+function showWebsiteText() {
+    document.getElementById("websiteText").style = "text-indent : 0px";
+    document.getElementById("websiteText").innerHTML = document.getElementById("websiteLink").href;
+}
+function jumpToWebsite() {
+    randomWebsite();
+    window.location.href = document.getElementById("websiteLink").href;
+}
+
 /* Functions */
 function homePage() {
     showNewNArticles(5);
+    showMyself("peopleContainer");
+    showAllFriends("friendList");
 }
 function blogHomePage() {
     showAllArticles();
