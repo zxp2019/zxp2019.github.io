@@ -428,3 +428,11 @@ function showAllFriends(ffDivId) {
         showPeople(safi, pc.id);
     }
 }
+
+/* Functions */
+function homePage() {
+    showNewNArticles(5);
+}
+function blogHomePage() {
+    showAllArticles();
+}
