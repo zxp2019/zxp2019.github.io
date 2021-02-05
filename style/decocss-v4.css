@@ -54,3 +54,22 @@
 {
     background-color:rgb(11,111,187);
 }
+
+/* 大按钮 */
+.newBigButton
+{
+    border-radius:.2rem;
+    border:none;
+    background-color:rgb(33,133,208);
+    color:white;
+    font-size:15px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:15px;
+	padding-right:15px;
+    margin:7.5px;
+}
+.newBigButton:active
+{
+    background-color:rgb(11,111,187);
+}
