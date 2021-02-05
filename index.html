@@ -138,6 +138,7 @@
 	</div>
 	-->
 	<!--upd 0322 今日更新至此-->
+	
 	<div class="line" style="padding:5px;">
 	<div id="main">
 	<div id="notice">
@@ -148,7 +149,7 @@
 		<h2 class="center"><i class="fa fa-calendar-o"></i>&nbsp;最新博文&nbsp;&nbsp;&nbsp;&nbsp;<a style="font-size:small;" href="./blog/index.html">查看更多</a></h2>
 	</div>
 	<div id="blogList">
-	<script>homePage();</script>
+	
 	</div>
 	<!--
 	<div id="blog">
@@ -189,18 +190,23 @@
 		</div>
 		<div class = "rightdiv">
 			<div id="peopleContainer">
-				<script>showMyself("peopleContainer");</script>
 			</div>
 		</div>
 		<div class="rightdiv">
-			<h2><i class="fa fa-map-signs"></i>&nbsp;今天去哪儿</h2>
-			<br/>
-			<img id="imgToShow" src="./x/default.png"/>
-			<br/>
-			<br/>
-			<button type="button" onclick="showImg()" class="button" style="width:100px;height:33px;background-color:#FF9933;border:1px solid #FF9933;"><i class="fa fa-flash"></i>&nbsp;&nbsp;手气不错</button>
-			<br/>
-			<pre class="small">以上信息仅供娱乐！</pre>
+			<div id="websiteContainer">
+				<h2><i class="fa fa-map-signs"></i>&nbsp;今天去哪儿</h2>
+				<br/>
+				<a id="websiteLink"><img id="imgToShow"/></a>
+				<br/>
+				<p id="websiteText"style="text-indent:0px;"></p>
+				<button type="button" onclick="showWebsiteText()" class="newBigButton"><i class="fa fa-eye"></i>&nbsp;&nbsp;显示网站</button>
+				<br/>
+				<button type="button" onclick="randomWebsite()" class="newBigButton"><i class="fa fa-random"></i>&nbsp;&nbsp;再来一个</button>
+				<button type="button" onclick="jumpToWebsite()" class="newBigButton"><i class="fa fa-flash"></i>&nbsp;&nbsp;手气不错</button>
+				<br/>
+				<script>randomWebsite();</script>
+				<pre class="small">以上信息仅供娱乐！</pre>
+			</div>
 		</div>
 		<div class="rightdiv">
 			<h2><i class="fa fa-calendar-check-o"></i>&nbsp;打卡区</h2>
@@ -256,7 +262,6 @@
 			<br/> -->
 		</div>
 		<div id = "friendList">
-			<script>showAllFriends("friendList");</script>
 		</div>
 		<div class="rightdiv">
 			<h2><i class="fa fa-star"></i>&nbsp;光荣榜</h2>
@@ -273,5 +278,6 @@
 	<script src="./script/showFooter.js"></script>
 	</div>
 	</div>
+	<script>homePage();</script>
 </body>
 </html>
