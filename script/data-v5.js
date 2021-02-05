@@ -10,7 +10,7 @@ var faicons = {
     "github" : "fa fa-github"
 };
 
-/* 联系人信息：存储自己和好友的信息 */
+/* 联系人信息：配置自己和好友的信息 */
 /* Peoples */
 var peoples = [
     {
@@ -74,7 +74,7 @@ var peoples = [
 var myself = 1;
 
 
-/* 文章列表：此处用于维护您的列表中文章的各项信息 */
+/* 文章列表：此处用于配置您的列表中文章的各项信息 */
 /* Articles */
 var articles = [
     {
@@ -286,4 +286,33 @@ var articles = [
         description : "快来看看新版博客长什么样吧！", 
         priority : 0
     }, 
+];
+
+/* 推荐网站：这些网站将会在主页 “今天去哪儿” 板块出现 */
+/* Websites */
+var websites = [
+    {
+        url : "https://zxp2019.github.io/",
+        img : ""
+    },
+    {
+        url : "https://vijos.org/d/oistream/",
+        img : "/x/7foj.png"
+    },
+    {
+        url : "https://zxp2019.github.io/",
+        img : "/x/oistream.png"
+    },
+    {
+        url : "https://www.luogu.com.cn/",
+        img : "/x/luogu.png"
+    },
+    {
+        url : "https://loj.ac/",
+        img : "/x/loj.png"
+    },
+    {
+        url : "https://vijos.org/",
+        img : "/x/vijos.png"
+    }
 ];
