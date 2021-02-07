@@ -7,7 +7,11 @@ var faicons = {
     "updateDate" : "fa fa-check-square-o", 
     "language" : "fa fa-file",
     "mail" : "fa fa-envelope-o",
-    "github" : "fa fa-github"
+    "github" : "fa fa-github",
+    "show" : "fa fa-eye",
+    "visited" : "fa fa-eye",
+    "random" : "fa fa-random",
+    "flash" : "fa fa-flash"
 };
 
 /* 联系人信息：配置自己和好友的信息 */
