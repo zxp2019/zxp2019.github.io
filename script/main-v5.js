@@ -435,6 +435,76 @@ function showAllFriends(ffDivId) {
 function websiteSum() {
     return websites.length-1;
 }
+function showWebsite(faDiv) {
+    var websiteContainer = document.getElementById(faDiv);
+    websiteContainer.style = "margin-top:10px;"
+
+    var websiteLink = document.createElement("a");
+    websiteContainer.appendChild(websiteLink);
+    websiteLink.id = "websiteLink";
+
+    var imgToShow = document.createElement("img");
+    websiteLink.appendChild(imgToShow);
+    imgToShow.id = "imgToShow";
+
+    var br1 = document.createElement("br");
+    websiteContainer.appendChild(br1);
+    
+    var websiteText = document.createElement("p");
+    websiteContainer.appendChild(websiteText);
+    websiteText.id = "websiteText";
+    websiteText.style = "text-indent : 0px;";
+
+    var showWebsiteButton = document.createElement("button");
+    websiteContainer.appendChild(showWebsiteButton);
+    showWebsiteButton.type = "button";
+    showWebsiteButton.onclick = showWebsiteText;
+    showWebsiteButton.className = "newBigButton";
+
+    var iShow = document.createElement("i");
+    showWebsiteButton.appendChild(iShow);
+    iShow.className = faicons["show"];
+
+    var showWebsiteButtonText = document.createTextNode("显示网站");
+    showWebsiteButton.appendChild(showWebsiteButtonText);
+
+    var br2 = document.createElement("br");
+    websiteContainer.appendChild(br2);
+
+    var randWebsiteButton = document.createElement("button");
+    websiteContainer.appendChild(randWebsiteButton);
+    randWebsiteButton.type = "button";
+    randWebsiteButton.onclick = randomWebsite;
+    randWebsiteButton.className = "newBigButton";
+
+    var iRand = document.createElement("i");
+    randWebsiteButton.appendChild(iRand);
+    iRand.className = faicons["random"];
+
+    var randWebsiteButtonText = document.createTextNode("再来一个");
+    randWebsiteButton.appendChild(randWebsiteButtonText);
+
+    var jumpWebsiteButton = document.createElement("button");
+    websiteContainer.appendChild(jumpWebsiteButton);
+    jumpWebsiteButton.type = "button";
+    jumpWebsiteButton.onclick = jumpToWebsite;
+    jumpWebsiteButton.className = "newBigButton";
+
+    var iFlash = document.createElement("i");
+    jumpWebsiteButton.appendChild(iFlash);
+    iFlash.className = faicons["flash"];
+
+    var jumpWebsiteButtonText = document.createTextNode("手气不错");
+    jumpWebsiteButton.appendChild(jumpWebsiteButtonText);
+
+    var notice = document.createElement("pre");
+    websiteContainer.appendChild(notice);
+    notice.className = "small";
+    notice.style = "background-color : rgba(0,0,0,0);";
+
+    var noticeText = document.createTextNode("以上信息仅供娱乐！");
+    notice.appendChild(noticeText);
+}
 function randomWebsite() {
     var index = Math.floor(Math.random() * websiteSum()) + 1;
     document.getElementById("imgToShow").src = websites[index].img;
@@ -454,6 +524,8 @@ function jumpToWebsite() {
 function homePage() {
     showNewNArticles(5);
     showMyself("peopleContainer");
+    showWebsite("websiteContainer");
+    randomWebsite();
     showAllFriends("friendList");
 }
 function blogHomePage() {
